@@ -90,9 +90,8 @@ nav {
 }
 
 .form {
-    width: 50%;
+    width: 75%;
     height: 71vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,10 +101,14 @@ nav {
 
 }
 
+.form form{
+    width: 100%;
+
+}
+
 .form-header {
     margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .login-button {
@@ -135,13 +138,15 @@ nav {
 
 /*colocando um do lado do outro*/
 .input-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
     padding: 1rem 0;
+    margin: 0 auto;
 }
 
 .input-box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
@@ -149,6 +154,7 @@ nav {
 }
 
 .input-box input {
+    width: 100%;
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -165,34 +171,6 @@ nav {
     outline: 1px solid #6c63ff;
 }
 
-.input-box label,
-.gender-title h6 {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #000000c0;
-}
-
-.input-box input::placeholder {
-    color: #000000be;
-}
-
-.gender-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.62rem;
-    padding: 0 0.5rem;
-}
-
-.gender-input {
-    display: flex;
-    align-items: center;
-}
-
-.gender-input label {
-    font-size: 0.81rem;
-    font-weight: 600;
-    color: #000000c0;
-}
 
 .continue-button button {
     width: 100%;
@@ -218,50 +196,6 @@ nav {
     font-weight: 500;
     color: #fff;
 }
-
-@media screen and(max-width: 1330px) {
-    .form-img {
-        display: none;
-    }
-
-    .container {
-        width: 50%;
-    }
-
-    .form {
-        width: 100%;
-    }
-}
-
-@media screen and(max-width: 1064px) {
-    .container {
-        width: 0%;
-        height: auto;
-    }
-
-    .inout-group {
-        flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
-    }
-
-    .gender-input {
-        margin-top: 2rem;
-    }
-
-    .gender-group {
-        flex-direction: column;
-    }
-
-    .gender-input {
-        margin-top: 0.5rem;
-    }
-}
-
-
-
 
 
 
