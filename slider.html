@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/slider.css">
+</head>
+<body>
+    <div class="divSlider">
+
+        <div class="divSlides">
+            <!-- radio button -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- fim radio button -->
+
+            <!-- slide img -->
+            <div class="divSlide first">
+
+                <img src="./assets/cadastro.jpg" alt="imagem 1">
+            </div>
+            <div class="divSlide">
+
+                <img src="./assets/plano de fundo.jpg" alt="imagem 2">
+            </div>
+            <div class="divSlide">
+
+                <img src="./assets/The_Hashira.webp" alt="imagem 3">
+            </div>
+            <div class="divSlide">
+
+                <img src="./assets/The_Hashira.webp" alt="imagem 4">
+            </div>
+
+            <div class="divNavigation-auto">
+                <div class="divAuto-btn1"></div>
+                <div class="divAuto-btn2"></div>
+                <div class="divAuto-btn3"></div>
+                <div class="divAuto-btn4"></div>
+            </div>
+
+        </div>
+
+        <div class="divManual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let count = 1;
+    document.getElementById("radio1").checked = true;
+
+    setInterval(function () {
+        nextImage();
+    }, 5000)
+
+    function nextImage() {
+        count++;
+        if (count > 4) {
+            count = 1;
+        }
+
+        document.getElementById("radio" + count).checked = true;
+    }
+
+</script>

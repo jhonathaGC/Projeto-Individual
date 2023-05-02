@@ -1,0 +1,348 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    
+    justify-self: center;
+}
+
+
+a {
+    color: black;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+
+}
+
+a:hover {
+
+    opacity: 0.5;
+    color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    width: 10%;
+    height: 10vh;
+}
+
+.divLogo img {
+    margin-left: 50px;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    height: 8vh;
+    border-style: outset;
+    border-width: 2px;
+}
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+
+/*container1*/
+.maincontainer{
+    width: 78%;
+    height: 40vh;
+    margin: 0 auto;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.Introducao{
+    width: 100%;
+    height: 17.5vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.text-introducao{
+    width: 50%;
+    padding: 10px;
+}
+.Introducao-img{
+    width: 500px;
+    height: 35vh;
+   
+}
+.Introducao-img img{
+    width: 500px;
+    height: 35vh;
+}
+
+/*container 2*/
+.maincontainer2{
+    width: 78%;
+    height: 40vh;
+    margin: 0 auto;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.Introducao{
+    width: 100%;
+    height: 35vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.text-introducao{
+    width: 50%;
+    padding: 10px;
+}
+.Introducao-img{
+    width: 500px;
+    height: 35vh;
+
+   
+}
+.Introducao-img img{
+    width: 500px;
+    height: 35vh;
+
+}
+
+/*container 3*/
+.maincontainer3{
+    width: 78%;
+    height: 40vh;
+    margin: 0 auto;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.Introducao{
+    width: 100%;
+    height: 35vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.text-introducao{
+    width: 50%;
+    padding: 10px;
+}
+.Introducao-img{
+    width: 500px;
+    height: 35vh;
+
+   
+}
+.Introducao-img img{
+    width: 500px;
+    height: 35vh;
+
+}
+.titulo{
+    width: 100%;
+    height: 6vh;
+    margin: 2;
+    
+    text-align: center;
+}
+/*FIM CONTAINER3*/
+
+
+/*CONTAINER 4*/
+.maincontainer4{
+    width: 78%;
+    height: 142.3vh;
+    margin: 0 auto;
+    border-style: outset;
+    border-width: 2px;
+   
+}
+
+.hashiras{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.text-hashiras{
+    width: 31%;
+    height: 44vh;
+    padding: 10px;
+    border-style: outset;
+    margin: 0 auto;
+}
+.hashiras-img{
+    width: 250px;
+    height: 17.5vh;
+    margin: auto;
+
+   
+}
+.hashiras-img img{
+    width: 250px;
+    height: 17.5vh;
+}
+.sobre-hashira{
+    width: 100%;
+    height: 30vh;
+}
+.titulo-hashiras{
+    width: 100%;
+    height: 6vh;
+    margin: 2;
+    text-align: center;
+}
+/*FIM CONTAINER4*/
+
+/*INFORMATIVO DOS HASHIRAS*/
+.hashira-nome{
+    width: 100%;
+    text-align: center;
+}
+/*FIM INFORMATIVO DOS HASHIRAS*/
+
+
+/*teste slider*/
+.divSlider{
+    margin: 0 auto;
+    width: 800px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.divSlides{
+    width: 400%;
+    height: 300px;
+    display: flex;
+}
+
+.divSlides input{
+    display: none;
+}
+
+.divSlide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.divSlide img{
+
+    width: 800px;
+  
+}
+
+.divManual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+#radio5:checked ~ .first{
+    margin-left: -100%;
+}
+#radio6:checked ~ .first{
+    margin-left: -125%;
+}
+#radio7:checked ~ .first{
+    margin-left: -150%;
+}
+#radio8:checked ~ .first{
+    margin-left: -175%;
+}
+#radio9:checked ~ .first{
+    margin-left: -200%;
+}
+
+.divNavigation-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.divNavigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+}
+.divNavigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .divNavigation-auto .divAuto-btn1{
+    background-color: white;
+}
+#radio2:checked ~ .divNavigation-auto .divAuto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .divNavigation-auto .divAuto-btn3{
+    background-color: white;
+}
+#radio4:checked ~ .divNavigation-auto .divAuto-btn4{
+    background-color: white;
+}
+#radio5:checked ~ .divNavigation-auto .divAuto-btn5{
+    background-color: white;
+}
+#radio6:checked ~ .divNavigation-auto .divAuto-btn6{
+    background-color: white;
+}
+#radio7:checked ~ .divNavigation-auto .divAuto-btn7{
+    background-color: white;
+}
+#radio8:checked ~ .divNavigation-auto .divAuto-btn8{
+    background-color: white;
+}
+#radio9:checked ~ .divNavigation-auto .divAuto-btn9{
+    background-color: white;
+}

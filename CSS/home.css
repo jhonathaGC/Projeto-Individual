@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    
+    justify-self: center;
+}
+
+
+a {
+    color: black;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+
+}
+
+a:hover {
+
+    opacity: 0.5;
+    color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    width: 10%;
+    height: 10vh;
+}
+
+.divLogo img {
+    margin-left: 50px;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    height: 8vh;
+    border-style: outset;
+    border-width: 2px;
+}
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/*FUNDO*/
+.divFundo {
+    margin: 0 auto;
+    width: 78%;
+    height: 50vh;
+    background: white;
+
+   
+}
+
+.divFundo img {
+    
+    width: 100%;
+    height: 50vh;
+}
+
+/*FIM FUNDO*/
+
+/*Ajustando texto*/
+.divTextLeft {
+    
+    width: 78%;
+    margin: 0 auto;
+    color: black;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+.divTextLeft h2{
+    padding: 10px;
+
+}
+.divTextLeft img{
+    width: 100%;
+    height: 35vh;
+
+   
+}
+.divTextRight {
+    
+    width: 78%;
+    margin: 0 auto;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-style: outset;
+    border-width: 2px;
+}
+.text h1{
+    text-align: center;
+}
+.text{
+    width: 100%;
+    padding: 20px;
+}
+/* FIM Ajustando texto*/
+
+/*qualquer coisa*/
+.subtitulo{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.divHashiras {
+    
+    width: 78%;
+    margin: 0 auto;
+    color: black;
+    font-size: 18px;
+    justify-content: space-between;
+    
+}
+.HashirasOnis{
+    display: flex;
+}
+.HashirasOnis img{
+    width: 50%;
+    height: 35vh;
+}
+.descricao{
+    display: flex;
+}
+.descricao p{
+    width: 50%;
+    height: 10vh;
+    padding: 5px;
+}
+
