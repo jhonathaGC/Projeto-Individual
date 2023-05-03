@@ -58,8 +58,36 @@ nav {
     letter-spacing: 3px;
     margin-left: 32px;
 }
-.geral{
+/*FIM NAV*/
+
+.paginageral{
+    display: flex;
+}
+.lateralEsquerda {
+    width: 11%;
+}
+.lateralEsquerda img{
+    width: 100%;
+    height: 35vh;
+}
+
+.meio{
     width: 78%; 
+    margin: 0;
+    padding: 0;  
+}
+.lateralDireita {
+    margin: 0;
+    width: 11%;
+}
+.lateralDireita img{
+    width: 100%;
+    height: 45vh;
+    margin: 0;
+}
+
+.geral{
+    width: 100%; 
     height: 105vh;
     margin: 0 auto;
     border-style: outset;

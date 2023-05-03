@@ -58,11 +58,38 @@ nav {
     letter-spacing: 3px;
     margin-left: 32px;
 }
+/*FIM NAV*/
+.paginageral{
+    display: flex;
+}
+.lateralEsquerda {
+    width: 11%;
+}
+.lateralEsquerda img{
+    width: 100%;
+    height: 45vh;
+}
+
+.meio{
+    width: 78%; 
+    margin: 0;
+    padding: 0;  
+}
+
+.lateralDireita {
+    margin: 0;
+    width: 11%;
+}
+.lateralDireita img{
+    width: 100%;
+    height: 45vh;
+    margin: 0;
+}
 
 /*FUNDO*/
 .divFundo {
     margin: 0 auto;
-    width: 78%;
+    width: 100%;
     height: 50vh;
     background: white;
 
@@ -80,7 +107,7 @@ nav {
 /*Ajustando texto*/
 .divTextLeft {
     
-    width: 78%;
+    width: 100%;
     margin: 0 auto;
     color: black;
     font-size: 18px;
@@ -100,7 +127,7 @@ nav {
 }
 .divTextRight {
     
-    width: 78%;
+    width: 100%;
     margin: 0 auto;
     color: black;
     font-size: 18px;
@@ -126,7 +153,7 @@ nav {
 }
 .divHashiras {
     
-    width: 78%;
+    width: 100%;
     margin: 0 auto;
     color: black;
     font-size: 18px;

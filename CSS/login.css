@@ -79,13 +79,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: #7a7af9d6;
     padding: 1rem;
 
 }
 
 .form-img img {
-    width: 61rem;
+    width: 72rem;
     height: 80vh;
 }
 

@@ -69,7 +69,7 @@ nav {
     margin: 10px auto;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
     background: #000;
    
 }
@@ -79,7 +79,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: #2f2d28;
     padding: 1rem;
 
 }
