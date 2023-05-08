@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    justify-self: center;
+    background: url("./assets/possivel-fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+a {
+    color: black;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+
+}
+
+a:hover {
+
+    opacity: 0.5;
+    color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    width: 10%;
+    height: 10vh;
+}
+
+.divLogo img {
+    margin-left: 50px;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+    height: 8vh;
+
+    border-width: 2px;
+}
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/*FIM NAV*/

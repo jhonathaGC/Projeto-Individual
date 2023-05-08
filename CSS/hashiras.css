@@ -107,6 +107,7 @@ nav {
 .text-introducao{
     width: 50%;
     padding: 10px;
+    box-sizing: border-box;
 }
 .Introducao-img{
     width: 500px;
@@ -137,6 +138,7 @@ nav {
 .text-introducao{
     width: 50%;
     padding: 10px;
+    box-sizing: border-box;
 }
 .Introducao-img{
     width: 500px;
@@ -169,6 +171,7 @@ nav {
 .text-introducao{
     width: 50%;
     padding: 10px;
+    box-sizing: border-box;
 }
 .Introducao-img{
     width: 500px;
@@ -212,6 +215,7 @@ nav {
     width: 31%;
     height: 44vh;
     padding: 10px;
+   
     border-style: outset;
     margin: 0 auto;
 }
@@ -289,6 +293,7 @@ nav {
 .manual-btn{
     border: 2px solid white;
     padding: 5px;
+    box-sizing: border-box;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
@@ -334,6 +339,7 @@ nav {
 .divNavigation-auto div{
     border: 2px solid blue;
     padding: 5px;
+    box-sizing: border-box;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
