@@ -63,6 +63,7 @@ nav {
 }
 /*FIM NAV*/
 
+/*NAVBAR LATERAL*/
 .navegation{
     position: relative;
     height: 100vh;
@@ -74,7 +75,7 @@ nav {
     transition: 0.5s;
 }
 .navegation:hover{
-    width: 177px;
+    width: 200px;
 }
 
 .navegation ul{
@@ -150,6 +151,24 @@ nav {
     border-radius: 50%;
     box-shadow: 15px -15px 0 green;
 }
-
+/*FIM NAVBAR LATERAL*/
+.Geral{
+    display: flex;
+    justify-content: center;
+   
+}
+ .Geral .sobre{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background: white;
+}
+.form-img{
+    position: absolute;
+}
+.sobre img{
+    width: 400px;
+    height: 200px;
+}
 
 
