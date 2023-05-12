@@ -211,6 +211,9 @@ nav {
     flex-wrap: wrap;
  
 }
+.hashira a{
+    text-decoration: orange;
+}
 .text-hashiras{
     width: 31%;
     height: 44vh;
