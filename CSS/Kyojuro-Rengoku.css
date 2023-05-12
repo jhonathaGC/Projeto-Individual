@@ -48,6 +48,7 @@ nav {
     height: 8vh;
     border-style: outset;
     border-width: 2px;
+    position: fixed;
 }
 
 
