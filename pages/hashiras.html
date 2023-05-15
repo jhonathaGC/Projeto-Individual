@@ -410,11 +410,11 @@
 
     setInterval(function () {
         nextImage();
-    }, 5000)
+    }, 3000)
 
     function nextImage() {
         count++;
-        if (count > 9) {
+        while (count > 9) {
             count = 1;
         }
 

@@ -7,17 +7,23 @@
 body{
    
     min-height: 100vh;
-  
+    
 }
-
+#leia{
+    background: url('../assets/fundo-amor.png') ;
+   
+    background-size: cover;
+}
 
 a {
     color: black;
     transform: 0.3s;
     font-size: 17px;
     font-family: 'Times New Roman';
+    text-decoration: none;
 
 }
+
 
 a:hover {
 
@@ -65,14 +71,15 @@ nav {
 /*FIM NAV*/
 
 .navegation{
-    position: relative;
+    position: fixed;
     height: 100vh;
     background: black;
     width: 70px;
     box-shadow: 10px 0 0 green;
-    border-left: 10px solid black;
+    border-left: 10px solid none;
     overflow-x: hidden;
     transition: 0.5s;
+    top: 8vh;
 }
 .navegation:hover{
     width: 200px;
@@ -136,7 +143,7 @@ nav {
     right: 0;
     width: 30px;
     height: 30px;
-    background: black;
+    background: none;
     border-radius: 50%;
     box-shadow: 15px 15px 0 green;
 }
@@ -147,18 +154,15 @@ nav {
     right: 0;
     width: 30px;
     height: 30px;
-    background: black ;
+    background: none ;
     border-radius: 50%;
     box-shadow: 15px -15px 0 green;
 }
 
-
-
 .geral{
     display: flex;
-    justify-content: space-between;
-
 }
+
  .geral {
     width: 100%;
   
@@ -167,7 +171,7 @@ nav {
 .sobre{
     width: 100%;
     height: 100vh;
-    margin: 0 11px;
+    margin: 5% ;
     padding: 10px;
 }
 #imagem0{
@@ -176,11 +180,13 @@ nav {
     margin: 0 auto;
 }
 #imagem0 img{
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     margin: 0 auto;
     padding: 15px;
+    justify-content: unset;
 }
+
 h1{
 
     text-align: center;
@@ -216,7 +222,7 @@ h2{
 }
 #respiracao{
     width: auto;
-    margin: 0  20px;
+    margin: 20px;
     padding: 10px;
     border-style: outset;
 }
@@ -232,10 +238,32 @@ h2{
     height: 37vh;
     margin: 1px;
     text-align: center;
+    justify-content: space-around;
     
     
 }
-#detalhe1 img{
+#detalhe01{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center; 
+}
+#detalhe02{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center; 
+}
+#detalhe03{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center; 
+}
+span img{
     width: 250px;
     height: 150px;
     margin: 0 auto;
@@ -244,3 +272,45 @@ h2{
     display: flex;
 }
 
+/*aparece dependendo dos hashiras*/
+
+#talvez1{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center;
+    display: none;
+}
+#talvez2{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center;
+    display: none;
+}
+#talvez3{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center;
+    display: none;
+}
+#talvez4{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center;
+    display: none;
+}
+#talvez5{
+    border-style: outset;
+    width: 33.3%;
+    height: 37vh;
+    margin: 1px;
+    text-align: center;
+    display: none;
+}

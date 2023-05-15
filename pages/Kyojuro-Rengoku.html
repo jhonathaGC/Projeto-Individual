@@ -29,44 +29,44 @@
             <ul>
                 <li class="list active">
                     <a href="Kyojuro-Rengoku.html">
-                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                        <span class="title">home</span>
+                        <span class="icon"><ion-icon name="flame-outline"></ion-icon></ion-icon></span>
+                        <span class="title">Kyojuro Rengoku</span>
                     </a>
                 </li>
-                <li id="mudar_fundo" onclick="mudar()" class="list">
+                <li id="som" onclick="som()" class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="document-outline"></ion-icon></span>
-                        <span class="title">usuario</span>
+                        <span class="title">Tengen Uzui </span>
                     </a>
                 </li>
-                <li class="list">
+                <li id="amor" onclick="amor()" class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="document-outline"></ion-icon></span>
-                        <span class="title">mensagem</span>
+                        <span class="title">Mitsuri Kanroji</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="construct-outline"></ion-icon></span>
-                        <span class="title">configuração</span>
+                        <span class="title">Shinobu Kocho</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="information-circle-outline"></ion-icon></span>
-                        <span class="title">ajuda</span>
+                        <span class="title">Muichiro Tokito</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <span class="title">senha</span>
+                        <span class="title">Obanai Iguro</span>
                     </a>
                 </li>
                 <li class="list">
                     <a href="#">
                         <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <span class="title">senha</span>
+                        <span class="title">Sanemi Shinazugawa</span>
                     </a>
                 </li>
             </ul>
@@ -79,9 +79,10 @@
         <!-- informações sobre o personagem -->
         <div class="sobre">
             <h1 id="title">Kyojuro Rengoku: O Hashira da chamas</h1>
-            <span id="imagem0"><img src="../assets/fogo.png" alt=""><img src="../assets/Hashira-fogo-slider.jpg" alt="">
-                <img src="../assets/fogo.png" alt=""></span>
-             
+            <div id="imagem0"><img src="../assets/Hashira-fogo-slider.jpg" alt="">
+               
+            </div>
+
 
 
             <h2>História</h2>
@@ -142,7 +143,6 @@
                     habilidade também permite que ele avalie com precisão as habilidades regenerativas e as
                     fraquezas da maioria dos Demônios, como Enmu. <br><br>
                 <p>
-
             </div>
 
             <h2 id="title3">
@@ -154,16 +154,18 @@
 
             </div>
 
-            <div class="respiracoes">
+            <div id="respiracoes" class="respiracoes">
 
                 <div class="parte1">
                     <div id="detalhe1">
                         <h4 id="title4_1">
                             Primeira Forma: Mar de Chamas
                         </h4>
-                        <img src="../assets/primeira-fogo.png" alt=""> <br>
-                        O espadachim avança em alta velocidade deixando um rastro de fogo e
-                        decapitando o seu alvo em um rápido golpe.
+                        <span id="imagem1"><img src="../assets/primeira-fogo.png" alt=""></span> <br>
+                        <div id="explicacao1">
+                            O espadachim avança em alta velocidade deixando um rastro de fogo e
+                            decapitando o seu alvo em um rápido golpe.
+                        </div>
                     </div>
 
 
@@ -171,63 +173,133 @@
                         <h4 id="title4_2">
                             Segunda Forma: Ascensão do Sol Ardente <br>
                         </h4>
-                        <img src="../assets/segunda-fogo.png" alt=""> <br>
-                        Em um movimento único o espadachim desfere um golpe em formato de arco de
-                        baixo para cima. <br><br>
+                        <span id="imagem2"><img src="../assets/segunda-fogo.png" alt=""></span> <br>
+                        <div id="explicacao2">
+                            Em um movimento único o espadachim desfere um golpe em formato de arco de
+                            baixo para cima. <br><br>
+                        </div>
                     </div>
+
+
                     <div id="detalhe1">
                         <h4 id="title4_3">
                             Terceira Forma: Espíritos Ígneos
                         </h4>
-                        <img src="../assets/terceira-fogo.png" alt=""> <br>
-                        Mostrada até o momento apenas no filme de Kimetsu no Yaiba, essa forma é
-                        descrita de maneira parecida com a Segunda Forma, sendo que o movimento em arco realizado
-                        por Rengoku acontece de forma descendente. <br><br>
+                        <span id="imagem3"><img src="../assets/terceira-fogo.png" alt=""></span> <br>
+                        <div id="explicacao3">
+                            Mostrada até o momento apenas no filme de Kimetsu no Yaiba, essa forma é
+                            descrita de maneira parecida com a Segunda Forma, sendo que o movimento em arco realizado
+                            por Rengoku acontece de forma descendente. <br><br>
+                        </div>
                     </div>
                 </div>
 
+
+                <div id="parte2" class="parte1">
+
+                    <div id="detalhe01">
+                        <h4 id="title4_3_1">
+                            Quarta Forma: Ondulação da Plenitude das Chamas
+                        </h4>
+                        <span id="imagem4"><img src="../assets/quarta-fogo.png" alt=""></span> <br>
+                        <div id="explicacao4">
+                            O espadachim golpeia com a sua espada em movimentos circulares, que são
+                            capazes tanto de o defender de ataques como cortar qualquer um que se aproxime. <br><br>
+                        </div>
+                    </div>
+
+
+                    <div id="detalhe02">
+                        <h4 id="title4_3_2">
+                            Quinta Forma: Tigre de Chamas
+                        </h4>
+                        <span id="imagem5"><img src="../assets/quinta-fogo.png" alt=""></span> <br>
+                        <div id="explicacao5">
+                            Rangoku desfere uma poderosa sequência de golpes com a sua espada, com os
+                            ataques assumindo a aparência de um tigre. <br><br>
+                        </div>
+                    </div>
+
+                    <div id="detalhe03">
+                        <h4 id="title4_3_3">
+                            Nona Forma: Rengoku (Purgatório)
+                        </h4>
+                        <span id="imagem6"><img src="../assets/nona-fogo.png" alt=""></span> <br>
+                        <div id="explicacao6">
+                            Nomeada como Rengoku, que em japonês também significa “Purgatório”, essa é a
+                            técnica suprema da Respiração das Chamas, com Kyojuro realizando um golpe devastador que
+                            queima até o solo onde é executado. Na adaptação para o filme, esse golpe ainda assume a
+                            forma de um dragão. <br><br>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="parte1">
 
-                    <div id="detalhe1">
+                    <div id="talvez1">
                         <h4 id="title4_3">
-                            Quarta Forma: Ondulação da Plenitude das Chamas
+
                         </h4>
-                        <img src="../assets/quarta-fogo.png" alt=""> <br>
-                        O espadachim golpeia com a sua espada em movimentos circulares, que são
-                        capazes tanto de o defender de ataques como cortar qualquer um que se aproxime. <br><br>
+                        <span id="imagem7"></span> <br>
+                        <div id="explicacao7">
+                            <br><br>
+                        </div>
                     </div>
 
 
-                    <div id="detalhe1">
+                    <div id="talvez2">
                         <h4 id="title4_3">
-                            Quinta Forma: Tigre de Chamas
+
                         </h4>
-                        <img src="../assets/quinta-fogo.png" alt=""> <br>
-                        Rangoku desfere uma poderosa sequência de golpes com a sua espada, com os
-                        ataques assumindo a aparência de um tigre. <br><br>
+                        <span id="imagem8"></span> <br>
+                        <div id="explicacao8">
+                            <br><br>
+                        </div>
                     </div>
 
-                    <div id="detalhe1">
+                    <div id="talvez3">
                         <h4 id="title4_3">
-                            Nona Forma: Rengoku (Purgatório)
+
                         </h4>
-                        <img src="../assets/nona-fogo.png" alt=""> <br>
-                        Nomeada como Rengoku, que em japonês também significa “Purgatório”, essa é a
-                        técnica suprema da Respiração das Chamas, com Kyojuro realizando um golpe devastador que
-                        queima até o solo onde é executado. Na adaptação para o filme, esse golpe ainda assume a
-                        forma de um dragão. <br><br>
+                        <span id="imagem9"></span> <br>
+                        <div id="explicacao9">
+                            <br><br>
+                        </div>
                     </div>
                 </div>
-                
+
+                <div class="parte1">
+
+                    <div id="talvez4">
+                        <h4 id="title4_3">
+
+                        </h4>
+                        <span id="imagem10"></span> <br>
+                        <div id="explicacao11">
+                            <br><br>
+                        </div>
+                    </div>
+
+
+                    <div id="detalhe5">
+                        <h4 id="title4_3">
+
+                        </h4>
+                        <span id="imagem11"></span> <br>
+                        <div id="explicacao11">
+                            <br><br>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
 
             </div>
-
         </div>
-
     </div>
-
-
+   
 
 
     <script>
@@ -241,52 +313,119 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink))
 
+        function som() {
+            const leia = document.getElementById('som')
 
 
-        function mudar() {
-            const leia = document.getElementById('mudar_fundo')
+
+            title.innerHTML = `Tengen Uzui`
+
+         
+            imagem0.innerHTML = `<img src="../assets/tenge-uzuy.jpg" alt="">`
 
 
-            title.innerHTML = `JHONATHA`
-            imagem0.style.backgroundimage = '<img src="../assets/agua.jpg" alt="">'
-            imagem0.innerHTML = `<img src="../assets/hashira-agua-info.png" alt="">`
-           
-            historia.innerHTML = '<br>'
+            historia.innerHTML = `Tengen nasceu em uma família de nove filhos dentro de um clã shinobi. Três das nove crianças morreram antes mesmo de atingirem os 10 anos de idade devido ao treinamento em excesso. Com os seis irmãos restantes, eles foram forçados a matar uns aos outros por ordem de seu pai sem que eles soubessem contra quem lutou, já que suas cabeças e rostos estavam cobertos por máscaras.<br>
+
+            Tengen percebeu o truque de seu pai somente depois de matar dois de seus irmãos. Aos 15 anos, sete de seus irmãos já haviam morrido, deixando apenas ele e seu irmão mais novo. Quando crianças, seu pai os forçou a passar por um treinamento severo e intensivo como uma tentativa de salvar o clã, e os influenciou a acreditar que eles precisavam dispor vidas inocentes em seu benefício, e apenas ter uma esposa como meio de produzir filhos. Como seu último irmão restante adotou essa mentalidade, e não se sentiu mal por matar seus outros irmãos, Tengen ficou chocado e decidiu deixar o clã permanentemente. Ele deixou a aldeia com suas esposas sem lutar contra seu irmão.<br>
+            A família de Uzui pratica a poligamia, então quando Tengen completou 15 anos, ele teve 3 esposas, que foram escolhidas pelo chefe do clã. Depois de deixar a aldeia com suas esposas, ele mais tarde as ensinaria a se valorizarem antes da missão, indo contra seus ensinamentos como kunoichi. Por um tempo depois que ele deixou o clã, tornou-se hábito para ele dizer ele estava indo para o inferno, mas parou depois que Makio ficou com raiva dele, Hinatsuri chorou e Suma o mordeu. Ele ficou angustiado sobre se deveria ter exterminado o clã Uzui, mas não conseguiu matar seu pai ou irmão.<img src="../assets/tenge-uzuy.jpg" alt="">`
 
             title2.innerHTML = `habilidades `
-            habilidades.innerHTML = ` <br>  
+            habilidades.innerHTML = `Tengen utiliza duas espadas e é um usuário da respiração do som, confira abaixo todas as formas que ele já mostrou no mangá: <br> `
+
+            title3.innerHTML = `Respiração do Som <br><br>`
+
+            respiracao.innerHTML = `A Respiração do Som é uma das formas de ataque em Kimetsu no Yaiba - Demon Slayer. Usada pelo hashira Tengen Uzui, ela só pode ser usada por dele devido ao tipo especial de Lâminas Nichirin que ele possui, que são mais largas do que o normal.<br>Esta respiração é derivada da respiração do Trovão, que por sua vez é derivada da respiração do Sol.<br>No post de hoje, nós trazemos todas as formas desta respiração, assim como a descrição dos ataques dela. <br><br>`
+
+            title4_1.innerHTML = `Primeira Forma: Rugido ( Ichi no kata: Todoroki)`
+            imagem1.innerHTML = '<img src="../assets/quarta-som.png" alt="">'
+            explicacao1.innerHTML = `Uzui levanta suas espadas gêmeas acima da cabeça dele e então usa um golpe vertical com força para baixo, enquanto simultaneamente cria uma explosão com as bombas dele, causando um estrondo alto que lembra um trovão.`
+
+            title4_2.innerHTML = `Quarta Forma: Cortes Ressoantes Constantes (Shi no kata: Kyōzan Muken) <br> `
+            imagem2.innerHTML = `   <img src="../assets/tenge-uzuy.jpg" alt="">`
+            explicacao2.innerHTML = `Uzui usa suas espadas separadas e gira elas rapidamente, enquanto arremessa as bombas dele, fazendo dessa forma uma técnica que tanto ataca quanto defende.<br><br>`
+
+            title4_3.innerHTML = `Quinta Forma: Performance de Cordas (Go no kata: Meigen Sōsō) <br> `
+            imagem3.innerHTML = `<img src="../assets/quinta-som.png" alt="">`
+            explicacao3.innerHTML = `Uzui levanta uma das suas Lâminas Nichirin com o cabo ao contrário e então gira a outra usando a corrente que conecta elas.<br>Ele une a isso o lançamento de diversas bombas. Esta técnica é tão poderosa que conseguiu sobrepujar-se até mesmo a uma Lua Superior.<br><br>`
+
+            title4_3_1.innerHTML = ``
+            imagem4.innerHTML = ``
+            title4_3_2.innerHTML = ``
+            imagem5.innerHTML = ``
+            title4_3_3.innerHTML = ``
+            imagem6.innerHTML = ``
+            explicacao5.innerHTML = ''
+            explicacao4.innerHTML = ''
+            explicacao6.innerHTML = ''
+            detalhe01.style.display = 'none'
+            detalhe02.style.display = 'none'
+            detalhe03.style.display = 'none'
+
+            respiracoes.style.height = '37.9vh'
             
+
+        }
+        function amor() {
+            const leia = document.getElementById('amor')
+
+            leia.style.background = `<img src="../assets/fundo-amor.webp" alt="">`
+            leia.style.backgroundSize =`cover`
+
+            title.innerHTML = `Mitsuri Kanroji `
+
+            imagem0.innerHTML = `<img src="../assets/mitsuri.png.webp" alt="">`
+            
+            historia.innerHTML = `Mitsuri nasceu entre cinco irmãos e exibiu uma força não natural em uma idade muito jovem por meio de sua composição muscular única, chocando até mesmo sua mãe, que era conhecida por sua força. Ela cresceu comendo muito mais do que uma pessoa normal e desenvolveu uma cor de cabelo não natural (declarada ser o resultado de comer muito sakura mochi  ), o que a levou a ser vista como uma aberração e incapaz de prosseguir com um casamento quando ela tinha dezessete anos.
             <br>
-            
+            Após essa rejeição, ela tingiu o cabelo de preto, fingiu estar fraca e se obrigou a comer uma quantidade normal na tentativa de se relacionar mais com as outras meninas, mesmo que isso prejudicasse seu bem-estar. Pouco depois de fazer esses ajustes em sua aparência física, Mitsuri foi abordada por um parceiro em potencial. No entanto, ela ficou em dúvida se fingir ser uma pessoa diferente iria realmente funcionar para ela no final.
             <br>
+            Em algum momento, seu parceiro a deixou ou ela o deixou. Mitsuri então encontrou Kagaya Ubuyashiki, que disse a ela para rejeitar a normalidade e abraçar quem ela era, já que sua força era um presente. Por causa desse encontro, ela se juntou aos Demon Slayers e usou sua habilidade e força ridícula para subir ao status de Hashira.
+            <br>
+            Enquanto estava no Corpo, ela também adotou a ideia de encontrar um homem mais forte do que ela para se casar, no entanto, isso não deu certo porque, com exceção de seus companheiros Hashira, ela era muito mais forte e habilidosa do que o resto dos homens. Ela começou a trabalhar com Kyojuro Rengoku e, em uma batalha, ela desenvolveu sua própria respiração, a Respiração do Amor..<img src="../assets/hashira-amor-info.png" alt="">`
+
+            title2.innerHTML = `habilidades `
+            habilidades.innerHTML = `Mitsuri é uma espadachim muito poderosa. Diz-se que ela concluiu a Seleção Final em apenas seis meses de treinamento, o que Kyojuro considera excelente. Mitsuri utiliza um estilo de combate baseado no “amor”. <br> `
+
+            title3.innerHTML = `Respiração do Amor <br><br>`
+
+            respiracao.innerHTML = `A Respiração do Som é uma das formas de ataque em Kimetsu no Yaiba - Demon Slayer. Usada pelo hashira Tengen Uzui, ela só pode ser usada por dele devido ao tipo especial de Lâminas Nichirin que ele possui, que são mais largas do que o normal.<br>Esta respiração é derivada da respiração do Trovão, que por sua vez é derivada da respiração do Sol.<br>No post de hoje, nós trazemos todas as formas desta respiração, assim como a descrição dos ataques dela. <br><br>`
+
+            title4_1.innerHTML = `Primeira Forma – Calafrios do Primeiro Amor ( Ichi no kata: Hatsukoi no Wananaki)`
+            imagem1.innerHTML = '<img src="../assets/primeira-amor.png" alt="">'
+            explicacao1.innerHTML = `Mitsuri avança em direção ao seu adversário com uma série de cortes de chicote para atingir o alvo dela.`
+
+            title4_2.innerHTML = `Segunda Forma – Angústia Induzindo amor ( Ni no kata: Ōnō Meguru Koi) <br> `
+            imagem2.innerHTML = `   <img src="../assets/segunda-amor.png" alt="">`
+            explicacao2.innerHTML = `Mitsuri dispara uma série de poderosos cortes usando o chicote dela.<br><br>`
+
+            title4_3.innerHTML = `Terceira Forma – Chuva de Gatinhos Amáveis ( San no kata: Koi Neko Shigure) <br> `
+            imagem3.innerHTML = `<img src="../assets/terceira-amor.png" alt="">`
+            explicacao3.innerHTML = `Mitsuri salta em direção ao adversário e usa uma série de ataques longos em rápida sucessão.<br><br>`
+
+            title4_3_1.innerHTML = `Quinta Forma – Ligação Ondulante – Unhas Confusas ( Go no kata: Yurameku Renjō Midarezume)`
+            imagem4.innerHTML = `<img src="../assets/quinta-amor.png" alt="">`
+            explicacao4.innerHTML = 'Mitsuri dá um salto mortal para trás criando uma série de ataques com o chicote dela, antes de enrolar a espada em torno do pescoço do seu adversário.'
+
+            title4_3_2.innerHTML = `Sexta Forma – Ventos do Amor com Patas de Gato (Roku no kata: Neko Ashi Koi Kaze)`
+            imagem5.innerHTML = `<img src="../assets/sexta-amor.png" alt="">`
+            explicacao5.innerHTML = 'Mitsuri rodopia para cima e para baixo, criando uma série de ataques cortantes antes de retroceder e começar novamente.'
+
+            title4_3_3.innerHTML = ``
+            imagem6.innerHTML = ``
+            explicacao6.innerHTML = ''
+           
+           
+            parte2.style.justifyContent = "space-around"
             
-            br><br>`
+            detalhe03.style.display = 'none'
 
-            title3.innerHTML = `Respiração das Chamas <br><br>`
-
-            respiracao.innerHTML = `A Respiração das Chamas tem ao todo nove formas, embora apenas cinco delas tenham sido mostradas no mangá e uma foi revelada no filme Mugen Train. <br><br>`
-
-            title4_1.innerHTML = `Primeira Forma: Mar de Chamas`
-            detalhe1.innerHTML = `O espadachim avança em alta velocidade deixando um rastro de fogo e decapitando o seu alvo em um rápido golpe. <br><br>`
-
-            title4_2.innerHTML = `Segunda Forma: Ascensão do Sol Ardente <br> `
-            detalhe2.innerHTML = `O espadachim avança em alta velocidade deixando um rastro de fogo e decapitando o seu alvo em um rápido golpe. <br><br>`
-
+            respiracoes.style.height = '37.9vh'
 
         }
 
 
-
-
-
-
-
-
-
-
-
-
     </script>
+
 </body>
 
 </html>

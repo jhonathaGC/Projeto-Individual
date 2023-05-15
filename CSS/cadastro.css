@@ -14,7 +14,7 @@ a {
     transform: 0.3s;
     font-size: 17px;
     font-family: 'Times New Roman';
-
+    text-decoration: none;
 }
 
 a:hover {
