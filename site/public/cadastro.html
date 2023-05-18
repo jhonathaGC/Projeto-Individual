@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cadastro</title>
+    <link rel="stylesheet" href="./CSS/cadastro.css">
+    
+    <script src="./js/funcoes.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="divLogo">
+                <a href="index.html"><img src="./assets/logo.png" alt=""></a>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-list"><a class="interação" href="index.html">Home</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/historia.html">História</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/hashiras.html">Hashiras</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/onis.html">Onis</a></li>
+                <li class="nav-list"><a class="interação" href="login.html">Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+   
+    <div class="container">
+
+        <div class="form-img">
+            <img src="./assets/plano-de-fundo.webp" alt="">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Nome</label>
+                        <input type="text" name="firstname" id="nome_input" placeholder="Digite o seu primeiro nome"
+                            required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email_input" placeholder="Digite o seu E-mail" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="password"> Senha</label>
+                        <input type="password" name="senha_input" id="senha_input" placeholder="Digite a sua senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmpassword">Confirmar Senha</label>
+                        <input type="password" name="confirmacao_senha_input" id="confirmacao_senha_input"
+                            placeholder="Confirme a sua senha" required>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button onclick="cadastrar()">Continuar</button>
+                </div>
+            </form>
+        </div>
+        <div id="div_erros_login"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            return false;
+        }
+       
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                    window.location = "login.html";
+        
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+     
+        });
+
+        return false;
+    }
+
+</script>

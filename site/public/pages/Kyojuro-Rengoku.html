@@ -13,14 +13,14 @@
     <header>
         <nav>
             <div class="divLogo">
-                <a href="home.html"><img src="../assets/logo.png" alt=""></a>
+                <a href="../index.html"><img src="../assets/logo.png" alt=""></a>
             </div>
             <ul class="nav-list">
-                <li class="nav-list"><a class="interação" href="historia.html">História</a></li>
-                <li class="nav-list"><a class="interação" href="hashiras.html">Hashiras</a></li>
-                <li class="nav-list"><a class="interação" href="onis.html">Onis</a></li>
-                <li class="nav-list"><a class="interação" href="login.html">Login</a></li>
-                <li class="nav-list"><a class="interação" href="CadastroResponsivel.html">Cadastro</a></li>
+                <li class="nav-list"><a class="interação" href="../pages/historia.html">História</a></li>
+                <li class="nav-list"><a class="interação" href="../pages/hashiras.html">Hashiras</a></li>
+                <li class="nav-list"><a class="interação" href="../pages/onis.html">Onis</a></li>
+                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
+                <li class="nav-list"><a class="interação" href="../cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
@@ -33,19 +33,19 @@
                         <span class="title">Kyojuro Rengoku</span>
                     </a>
                 </li>
-                <li id="som" onclick="som()" class="list">
+                <li id="sound" onclick="sound()" class="list">
                     <a href="#">
                         <span class="icon"><img src="../assets/sound-waves-icon.png" alt=""></span>
                         <span class="title">Tengen Uzui </span>
                     </a>
                 </li>
-                <li id="amor" onclick="amor()" class="list">
+                <li id="love" onclick="love()" class="list">
                     <a href="#">
                         <span class="icon"><img src="../assets/love-icon.png" alt=""></span>
                         <span class="title">Mitsuri Kanroji</span>
                     </a>
                 </li>
-                <li class="list">
+                <li id="insect" onclick="insect()" class="list">
                     <a href="#">
                         <span class="icon"><img src="../assets/insect-icon.png" alt=""></span>
                         <span class="title">Shinobu Kocho</span>
@@ -79,8 +79,8 @@
         <!-- informações sobre o personagem -->
         <div class="sobre">
             <h1 id="title">Kyojuro Rengoku: O Hashira da chamas</h1>
-            <div id="imagem0"><img src="../assets/Hashira-fogo-slider.jpg" alt="">
-               
+            <div id="imagem0"> <img src="../assets/fogo.png" alt=""><img src="../assets/Hashira-fogo-slider.jpg" alt="">
+                <img src="../assets/fogo.png" alt="">
             </div>
 
 
@@ -290,16 +290,12 @@
                             <br><br>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
             </div>
         </div>
     </div>
-   
+
+
 
 
     <script>
@@ -313,14 +309,14 @@
         list.forEach((item) =>
             item.addEventListener('click', activeLink))
 
-        function som() {
-            const leia = document.getElementById('som')
+        function sound() {
+            const leia = document.getElementById('sound')
 
 
 
             title.innerHTML = `Tengen Uzui`
 
-         
+
             imagem0.innerHTML = `<img src="../assets/tenge-uzuy.jpg" alt="">`
 
 
@@ -362,19 +358,17 @@
             detalhe03.style.display = 'none'
 
             respiracoes.style.height = '37.9vh'
-            
+
 
         }
-        function amor() {
-            const leia = document.getElementById('amor')
+        function love() {
+            const leia = document.getElementById('love')
 
-            leia.style.background = `<img src="../assets/fundo-amor.webp" alt="">`
-            leia.style.backgroundSize =`cover`
 
             title.innerHTML = `Mitsuri Kanroji `
 
             imagem0.innerHTML = `<img src="../assets/mitsuri.png.webp" alt="">`
-            
+
             historia.innerHTML = `Mitsuri nasceu entre cinco irmãos e exibiu uma força não natural em uma idade muito jovem por meio de sua composição muscular única, chocando até mesmo sua mãe, que era conhecida por sua força. Ela cresceu comendo muito mais do que uma pessoa normal e desenvolveu uma cor de cabelo não natural (declarada ser o resultado de comer muito sakura mochi  ), o que a levou a ser vista como uma aberração e incapaz de prosseguir com um casamento quando ela tinha dezessete anos.
             <br>
             Após essa rejeição, ela tingiu o cabelo de preto, fingiu estar fraca e se obrigou a comer uma quantidade normal na tentativa de se relacionar mais com as outras meninas, mesmo que isso prejudicasse seu bem-estar. Pouco depois de fazer esses ajustes em sua aparência física, Mitsuri foi abordada por um parceiro em potencial. No entanto, ela ficou em dúvida se fingir ser uma pessoa diferente iria realmente funcionar para ela no final.
@@ -413,16 +407,166 @@
             title4_3_3.innerHTML = ``
             imagem6.innerHTML = ``
             explicacao6.innerHTML = ''
-           
-           
+
+
             parte2.style.justifyContent = "space-around"
-            
+
             detalhe03.style.display = 'none'
 
             respiracoes.style.height = '37.9vh'
 
         }
 
+        function insect() {
+            const leia = document.getElementById('insect')
+
+
+
+            title.innerHTML = `Shinobu Kocho`
+
+            imagem0.innerHTML = `<img src="../assets/hashira-inseto-info.jpg" alt="">`
+
+            historia.innerHTML = `Shinobu Kocho nasceu em uma família comum com seu pai, sua mãe e sua irmã mais velha “Kanae Kocho”.
+
+            De acordo com Shinobu sua família era muito feliz e amigável, mas tudo foi destruído graças a um oni.
+
+            Durante esse ataque os pais de Shinobu foram mortos e o destino dela e de sua irmã parecia que seria o mesmo, porém o pilar da pedra “Gyomei Himejima” chegou a tempo e salvou as duas irmãs.
+
+            Agora salvas, Shinobu e Kanae tomaram a decisão de que jamais deixariam acontecer o que aconteceu com elas com outras família e começaram a treinar para serem mais fortes.
+
+            Juntas ambas entraram para a organização de caçadores algum tempo depois.
+
+            A Kanae chegou ao rank hashira assumindo cargo de pilar da flor e a Shinobu chegou ao rank Kinoe e ficou como Tsuguko da Kanae.
+
+            Algum tempo depois, Shinobu e Kanae adotaram Kanao Tsuyuri como sua irmã, basicamente elas encontraram a Kanao quando ela era uma escrava e depois de uma curta conversa a Shinobu puxou a Kanao e jogou dinheiro pra cima, com a desculpa de que aquilo pagaria o homem pela Kanao.
+
+            Shinobu e a Kanae levaram a pequena Kanao direto para a mansão da borboleta, onde passaram a cuidar dela e também começaram à ajudar a superar os traumas que ela tinha em sua mente, como o fato de não conseguir tomar atitudes sozinha.
+
+            Kanae Kocho durante uma de suas missões como pilar enfrentou o lua superior 2 “Douma” e acabou morta durante o combate.
+
+            Conforme o sol nascia Shinobu chegou ao local a tempo de ouvir as últimas palavras de sua irmã. 
+
+            De primeira Kanae pediu para a Shinobu deixar a organização de caçadores, mas com a insistência de Shinobu, Kanae abriu o jogo e deu informações sobre o Douma para que ela conseguisse sua vingança no futuro.
+
+            A partir daqui, Shinobu passou a ter um ódio fervente dentro de si e começou a pensar e planejar como faria a sua vingança.
+
+            <img src="../assets/hashira-inseto-info.png" alt="">`
+
+            title2.innerHTML = `habilidades `
+            habilidades.innerHTML = `Mitsuri é uma espadachim muito poderosa. Diz-se que ela concluiu a Seleção Final em apenas seis meses de treinamento, o que Kyojuro considera excelente. Mitsuri utiliza um estilo de combate baseado no “amor”. <br> `
+
+            title3.innerHTML = `Respiração do Amor <br><br>`
+
+            respiracao.innerHTML = `A Respiração do Som é uma das formas de ataque em Kimetsu no Yaiba - Demon Slayer. Usada pelo hashira Tengen Uzui, ela só pode ser usada por dele devido ao tipo especial de Lâminas Nichirin que ele possui, que são mais largas do que o normal.<br>Esta respiração é derivada da respiração do Trovão, que por sua vez é derivada da respiração do Sol.<br>No post de hoje, nós trazemos todas as formas desta respiração, assim como a descrição dos ataques dela. <br><br>`
+
+            title4_1.innerHTML = `Primeira Forma – Calafrios do Primeiro Amor ( Ichi no kata: Hatsukoi no Wananaki)`
+            imagem1.innerHTML = '<img src="../assets/primeira-amor.png" alt="">'
+            explicacao1.innerHTML = `Mitsuri avança em direção ao seu adversário com uma série de cortes de chicote para atingir o alvo dela.`
+
+            title4_2.innerHTML = `Segunda Forma – Angústia Induzindo amor ( Ni no kata: Ōnō Meguru Koi) <br> `
+            imagem2.innerHTML = `   <img src="../assets/segunda-amor.png" alt="">`
+            explicacao2.innerHTML = `Mitsuri dispara uma série de poderosos cortes usando o chicote dela.<br><br>`
+
+            title4_3.innerHTML = `Terceira Forma – Chuva de Gatinhos Amáveis ( San no kata: Koi Neko Shigure) <br> `
+            imagem3.innerHTML = `<img src="../assets/terceira-amor.png" alt="">`
+            explicacao3.innerHTML = `Mitsuri salta em direção ao adversário e usa uma série de ataques longos em rápida sucessão.<br><br>`
+
+            title4_3_1.innerHTML = `Quinta Forma – Ligação Ondulante – Unhas Confusas ( Go no kata: Yurameku Renjō Midarezume)`
+            imagem4.innerHTML = `<img src="../assets/quinta-amor.png" alt="">`
+            explicacao4.innerHTML = 'Mitsuri dá um salto mortal para trás criando uma série de ataques com o chicote dela, antes de enrolar a espada em torno do pescoço do seu adversário.'
+
+            title4_3_2.innerHTML = `Sexta Forma – Ventos do Amor com Patas de Gato (Roku no kata: Neko Ashi Koi Kaze)`
+            imagem5.innerHTML = `<img src="../assets/sexta-amor.png" alt="">`
+            explicacao5.innerHTML = 'Mitsuri rodopia para cima e para baixo, criando uma série de ataques cortantes antes de retroceder e começar novamente.'
+
+            title4_3_3.innerHTML = ``
+            imagem6.innerHTML = ``
+            explicacao6.innerHTML = ''
+
+
+            parte2.style.justifyContent = "space-around"
+
+            detalhe03.style.display = 'none'
+
+            respiracoes.style.height = '37.9vh'
+
+        }
+
+        function insect() {
+            const leia = document.getElementById('insect')
+
+
+
+            title.innerHTML = `Shinobu Kocho`
+
+            imagem0.innerHTML = `<img src="../assets/hashira-inseto-info.jpg" alt="">`
+
+            historia.innerHTML = `Shinobu Kocho nasceu em uma família comum com seu pai, sua mãe e sua irmã mais velha “Kanae Kocho”.
+
+            De acordo com Shinobu sua família era muito feliz e amigável, mas tudo foi destruído graças a um oni.
+
+            Durante esse ataque os pais de Shinobu foram mortos e o destino dela e de sua irmã parecia que seria o mesmo, porém o pilar da pedra “Gyomei Himejima” chegou a tempo e salvou as duas irmãs.
+
+            Agora salvas, Shinobu e Kanae tomaram a decisão de que jamais deixariam acontecer o que aconteceu com elas com outras família e começaram a treinar para serem mais fortes.
+
+            Juntas ambas entraram para a organização de caçadores algum tempo depois.
+
+            A Kanae chegou ao rank hashira assumindo cargo de pilar da flor e a Shinobu chegou ao rank Kinoe e ficou como Tsuguko da Kanae.
+
+            Algum tempo depois, Shinobu e Kanae adotaram Kanao Tsuyuri como sua irmã, basicamente elas encontraram a Kanao quando ela era uma escrava e depois de uma curta conversa a Shinobu puxou a Kanao e jogou dinheiro pra cima, com a desculpa de que aquilo pagaria o homem pela Kanao.
+
+            Shinobu e a Kanae levaram a pequena Kanao direto para a mansão da borboleta, onde passaram a cuidar dela e também começaram à ajudar a superar os traumas que ela tinha em sua mente, como o fato de não conseguir tomar atitudes sozinha.
+
+            Kanae Kocho durante uma de suas missões como pilar enfrentou o lua superior 2 “Douma” e acabou morta durante o combate.
+
+            Conforme o sol nascia Shinobu chegou ao local a tempo de ouvir as últimas palavras de sua irmã. 
+
+            De primeira Kanae pediu para a Shinobu deixar a organização de caçadores, mas com a insistência de Shinobu, Kanae abriu o jogo e deu informações sobre o Douma para que ela conseguisse sua vingança no futuro.
+
+            A partir daqui, Shinobu passou a ter um ódio fervente dentro de si e começou a pensar e planejar como faria a sua vingança.
+
+            <img src="../assets/hashira-inseto-info.jpg" alt="">`
+
+            title2.innerHTML = `habilidades `
+            habilidades.innerHTML = `Shinobu seguiu seu caminho entre os Hashiras. Ao desenvolver a variação da Respiração da Água e da Flor, a Respiração do Inseto, Shinobu conseguiu balancear sua falta de força e basear seu estilo em velocidade para aumentar o poder de impacto. <br> `
+
+            title3.innerHTML = `Respiração do inseto <br><br>`
+
+            respiracao.innerHTML = `A respiração dos insetos é ramificada da respiração das flores, que em si é uma ramificação da respiração da água. Embora Shinobu possa ter sido a única dentro dos Pilares incapaz de decapitar Demônios pela sua baixa força física, ela ainda é tão mortal quanto eles. Usando esta respiração única, ela reveste sua arma com veneno feito de flores de glicínias para injetar em seus oponentes. <br><br>`
+
+            title4_1.innerHTML = `Dança da borboleta: capricho (Chō no mai: Tawamure)`
+            imagem1.innerHTML = '<img src="../assets/hashira-inseto-info.jpg" alt="">'
+            explicacao1.innerHTML = `Shinobu pula para frente em direção ao oponente e os perfura várias vezes com sua lâmina para injetar seu veneno`
+
+            title4_2.innerHTML = `Dança da Picada de Abelha: True Flutter (Hōga no mai: Manabiki) <br> `
+            imagem2.innerHTML = ` <img src="../assets/hashira-inseto-info.jpg" alt="">`
+            explicacao2.innerHTML = `Shinobu corre em seu alvo a uma velocidade incrível e usa o impulso de sua velocidade para fortalecer seu ataque contra seu oponente e injetar veneno letal neles..<br><br>`
+
+            title4_3.innerHTML = `Dança da Libélula: Hexágono de Olho Composto (Seirei no mai: Fukugan rokkaku) <br> `
+            imagem3.innerHTML = `<img src="../assets/hashira-inseto-info.jpg" alt="">`
+            explicacao3.innerHTML = `Um ataque de seis ataques em que Shinobu pretende atacar e injetar seu alvo com várias doses de veneno nos pontos fracos do demônio alvo (como pescoço, coração, tronco etc.) para matá-los com uma grande dose de veneno.<br><br>`
+
+            title4_3_1.innerHTML = `Dança da centopéia: ziguezague de cem pernas (Gokō no mai: Hyakusoku jabara)`
+            imagem4.innerHTML = `<img src="../assets/hashira-inseto-info.jpg" alt="">`
+            explicacao4.innerHTML = 'Um ataque em que Shinobu usa sua velocidade máxima para executar um padrão em zigue-zague para confundir seu oponente, a fim de criar uma abertura para ela esfaquear diretamente o pescoço do oponente e injetar veneno para matá-los, com a força e o poder da facada sendo aprimorados ainda mais pelo momento da velocidade dela. Doma observou que a velocidade absoluta dessa técnica é forte o suficiente para destruir uma ponte de madeira inteira.'
+
+            title4_3_2.innerHTML = ``
+            imagem5.innerHTML = ``
+            explicacao5.innerHTML = ''
+
+            title4_3_3.innerHTML = ``
+            imagem6.innerHTML = ``
+            explicacao6.innerHTML = ''
+
+
+            parte2.style.justifyContent = "space-around"
+
+            detalhe03.style.display = 'none'
+            detalhe02.style.display = 'none'
+
+            respiracoes.style.height = '37.9vh'
+
+        }
 
     </script>
 

@@ -8,12 +8,9 @@ body{
    
     min-height: 100vh;
     
+    
 }
-#leia{
-    background: url('../assets/fundo-amor.png') ;
    
-    background-size: cover;
-}
 
 a {
     color: black;
@@ -21,6 +18,8 @@ a {
     font-size: 17px;
     font-family: 'Times New Roman';
     text-decoration: none;
+
+    
 
 }
 
@@ -159,8 +158,15 @@ nav {
     box-shadow: 15px -15px 0 green;
 }
 
+.LovePilar{
+    background: url('../assets/fundo-amor.png') ;
+}
+
 .geral{
     display: flex;
+   
+
+    
 }
 
  .geral {
@@ -322,3 +328,4 @@ ul img{
     width: 30px;
     height: 30px;
 }
+

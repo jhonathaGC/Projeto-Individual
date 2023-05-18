@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/login.css">
+
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="divLogo">
+                <a href="index.html"><img src="./assets/logo.png" alt=""></a>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-list"><a class="interação" href="index.html">Home</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/onis.html">História</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/hashiras.html">Hashiras</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/onis.html">Onis</a></li>
+                <li class="nav-list"><a class="interação" href="./pages/cadastro.html">Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+   
+    <div class="container">
+
+        <div class="form-img">
+            <img src="./assets/cadastro.jpg" alt="">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Login</h1>  
+
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname"> E-mail ou Nickname </label>
+                        <input type="text" name="firstname" id="email_input" placeholder="Digite o seu E-mail ou Nickname"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <label for="lastname"> Senha</label>
+                        <input type="text" name="lastname" id="senha_input" placeholder="Digite a sua senha" required>
+                    </div>
+                    <div class="cadastro">
+                        Ainda não possui conta?
+                        <a style="color: orange;" href="cadastro.html">Cadastre-se</a> já.
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button onclick="entrar()">Continuar</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+
+    function entrar() {
+ 
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            
+            return false;
+        }
+        
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                 
+                    window.location = "./dashboard/cards.html";
+                     // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+
+</script>
