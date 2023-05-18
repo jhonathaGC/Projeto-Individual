@@ -25,9 +25,9 @@
     </nav>
   </header>
 
-  
+
   <div class="container">
-    
+
     <div id="question-container" class="hide">
       <div id="question">Question</div>
       <div id="answer-buttons" class="btn-grid">
@@ -43,6 +43,7 @@
     </div>
   </div>
 </body>
+
 </html>
 <script>
 
@@ -110,12 +111,17 @@
     }
   }
 
+  var respostaCorreta = 0
+  var respostaErrada = 0
+
   function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
       element.classList.add('correct')
+      respostaCorreta++
     } else {
       element.classList.add('wrong')
+      respostaErrada++
     }
   }
 
@@ -160,4 +166,36 @@
       ]
     }
   ]
+
+
+  fetch("/usuarios/cadastrarResposta", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      idUsuario:  sessionStorage.ID_USUARIO,
+      respostaCorreta: respostaCorreta,
+      respostaErrada: respostaErrada
+    })
+  }).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+    if (resposta.ok) {
+      window.location = "login.html";
+
+    } else {
+      throw ("Houve um erro ao tentar realizar o cadastro!");
+    }
+  }).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+
+  });
+
+  return false;
+
+
 </script>
