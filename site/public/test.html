@@ -25,6 +25,7 @@
     </nav>
   </header>
 
+  <br>
 
   <div class="container">
 
@@ -94,6 +95,34 @@
     while (answerButtonsElement.firstChild) {
       answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
+    fetch("/usuarios/cadastrarResposta", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuario:  sessionStorage.ID_USUARIO,
+            respostaCorreta: respostaCorreta,
+            respostaErrada: respostaErrada
+          })
+        }).then(function (resposta) {
+      
+          console.log("resposta: ", resposta);
+      
+          if (resposta.ok) {
+            
+      
+          } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+          }
+        }).catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+      
+        });
+      
+        return false;
   }
 
   function selectAnswer(e) {
@@ -109,6 +138,7 @@
       startButton.innerText = 'Restart'
       startButton.classList.remove('hide')
     }
+    
   }
 
   var respostaCorreta = 0
@@ -118,26 +148,23 @@
     clearStatusClass(element)
     if (correct) {
       element.classList.add('correct')
-      respostaCorreta++
+     respostaCorreta++
     } else {
       element.classList.add('wrong')
       respostaErrada++
     }
+   
   }
 
   function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
+     
+
   }
 
   const questions = [
-    {
-      question: 'What is 2 + 2?',
-      answers: [
-        { text: '4', correct: true },
-        { text: '22', correct: false }
-      ]
-    },
+    
     {
       question: 'Qualé o nome da irmã de Tanjiro',
       answers: [
@@ -167,35 +194,7 @@
     }
   ]
 
+ 
 
-  fetch("/usuarios/cadastrarResposta", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
-      idUsuario:  sessionStorage.ID_USUARIO,
-      respostaCorreta: respostaCorreta,
-      respostaErrada: respostaErrada
-    })
-  }).then(function (resposta) {
-
-    console.log("resposta: ", resposta);
-
-    if (resposta.ok) {
-      window.location = "login.html";
-
-    } else {
-      throw ("Houve um erro ao tentar realizar o cadastro!");
-    }
-  }).catch(function (resposta) {
-    console.log(`#ERRO: ${resposta}`);
-
-  });
-
-  return false;
-
-
+        
 </script>

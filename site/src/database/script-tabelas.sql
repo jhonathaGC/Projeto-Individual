@@ -17,6 +17,14 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
+CREATE TABLE respostas(
+	idRespostas int AUTO_INCREMENT,
+	respostaCorreta char(10),
+	respostaErrada char(10),
+	fkUsuario int,
+	constraint fkUsuarioResposta FOREIGN key (fkUsuario) references usuario(id)
+);
+
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
