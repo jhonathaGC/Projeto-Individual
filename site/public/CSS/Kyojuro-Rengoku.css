@@ -276,6 +276,7 @@ span img{
 }
 .parte1{
     display: flex;
+    justify-content: space-around;
 }
 
 /*aparece dependendo dos hashiras*/
