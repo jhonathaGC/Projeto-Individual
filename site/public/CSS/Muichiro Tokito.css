@@ -54,7 +54,7 @@ nav {
     border-style: outset;
     border-width: 2px;
     position: fixed;
-    background-color: rgba(128, 128, 128, 0.4);
+    background-color: rgba(128, 128, 128, 0.271);
  
 }
 
@@ -75,9 +75,9 @@ nav {
 .navegation{
     position: fixed;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.537);
+    background: rgba(128, 128, 128, 0.511);
     width: 70px;
-    box-shadow: 10px 0 0 rgba(0, 0, 0, 0.537);
+    box-shadow: 10px 0 0 rgba(128, 128, 128, 0.583);
     border-left: 10px solid none;
     overflow-x: hidden;
     transition: 0.5s;
@@ -136,7 +136,7 @@ nav {
     white-space: nowrap;
 }
 .navegation ul li.active{
-    background: rgba(0, 0, 0, 0.537);
+    background: rgba(128, 128, 128, 0.395);
 }
 .navegation ul li.active a::before{
     content: '';
@@ -147,7 +147,7 @@ nav {
     height: 30px;
     background: none;
     border-radius: 50%;
-    box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.537);
+    box-shadow: 15px 15px 0 rgba(128, 128, 128, 0.395);
 }
 .navegation ul li.active a::after{
     content: '';
@@ -158,7 +158,7 @@ nav {
     height: 30px;
     background: none ;
     border-radius: 50%;
-    box-shadow: 15px -15px 0 rgba(0, 0, 0, 0.537);
+    box-shadow: 15px -15px 0 rgba(128, 128, 128, 0.395);
 }
 
 
