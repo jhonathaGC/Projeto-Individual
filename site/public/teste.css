@@ -1,0 +1,132 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+    margin: 0;
+    padding: 0;
+  }
+  
+body{
+   
+    min-height: 100vh;
+    background-image: url('../assets/fundo-serpente.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    color: white;   
+}
+  a {
+    color: black;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+
+
+a:hover {
+
+    opacity: 0.5;
+    color: green;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    width: 10%;
+    height: 10vh;
+}
+
+.divLogo img {
+    margin-left: 50px;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: transparent;
+    height: 8vh;
+    border-style: outset;
+    border-width: 2px;
+    position: fixed;
+}
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: 50%;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+  
+  :root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+  }
+  
+
+  
+  .container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+  }
+  
+  .btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+  }
+  
+  .btn:hover {
+    border-color: black;
+  }
+  
+  .btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+  }
+  
+  .btn.wrong {
+    --hue: var(--hue-wrong);
+  }
+  
+  .start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }

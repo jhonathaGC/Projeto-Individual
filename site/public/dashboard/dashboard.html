@@ -9,7 +9,7 @@
     <title>AquaTech | Dashboards</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="dashboards.css">   
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,39 +25,68 @@
 </head>
 
 <body onload=" atualizarFeed()">
-
-    <div class="janela">
-        <div class="header-left">
-            <h1>AquaTech</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+    <header>
+        <nav>
+            <div class="divLogo">
+                <a href="../index.html"><img src="../assets/logo.png" alt=""></a>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+            <ul class="nav-list">
+                <li class="nav-list"><a class="interação" href="../pages/hashiras.html">História</a></li>
+                <li class="nav-list"><a class="interação" href="../pages/hashiras.html">Hashiras</a></li>
+                <li class="nav-list"><a class="interação" href="../pages/onis.html">Onis</a></li>
+                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
+                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
+           
+            </ul>
+        </nav>
+    </header>
+    <div class="geral">
+        <div class="navegation">
+            <ul>
+                <li class="list ">
+                    <a href="Kyojuro-Rengoku.html">
+                        <span class="icon"><img src="../assets/fire-icon.png" alt=""></span>
+                        <span class="title">AquaTech</span>
+                    </a>
+                </li>
+                <li id="sound"  class="list">
+                    <a href="#">
+                        <span class="icon"><img src="../assets/sound-waves-icon.png" alt=""></span>
+                        <span class="title">usuário </span>
+                    </a>
+                </li>
+                <li id="love"  class="list">
+                    <a href="./cards.html">
+                        <span class="icon"><img src="../assets/love-icon.png" alt=""></span>
+                        <span class="title">Aquários</span>
+                    </a>
+                </li>
+                <li id="insect"  class="list active">
+                    <a href="#">
+                        <span class="icon"><img src="../assets/insect-icon.png" alt=""></span>
+                        <span class="title">Gráficos</span>
+                    </a>
+                </li>
+                <li o class="list">
+                    <a href="./mural.html">
+                        <span class="icon"><img src="../assets/mis-icon.png" alt=""></span>
+                        <span class="title">Mural de Avisos</span>
+                    </a>
+                </li>
+                <li onclick="limparSessao()" class="list">
+                    <a href="./mural.html">
+                        <span class="icon"><img src="../assets/mis-icon.png" alt=""></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+    <div class="janela">
 
+        
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
@@ -117,8 +146,6 @@
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
@@ -154,7 +181,7 @@
                 elementoAtual.classList.remove("display-block")
             }
             elementoAtual.classList.add("display-none")
-            
+
             // alterando estilo do botão
             let btnAtual = document.getElementById(`btnAquario${i}`)
             if (btnAtual.classList.contains("btn-pink")) {
@@ -162,12 +189,12 @@
             }
             btnAtual.classList.add("btn-white")
         }
-        
+
         // exibindo - ou não - o gráfico
         let graficoExibir = document.getElementById(`grafico${idAquario}`)
         graficoExibir.classList.remove("display-none")
         graficoExibir.classList.add("display-block")
-        
+
         // alterando estilo do botão
         let btnExibir = document.getElementById(`btnAquario${idAquario}`)
         btnExibir.classList.remove("btn-white")
@@ -224,14 +251,14 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Umidade',
+                label: 'Hashiras',
                 data: [],
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1
             },
             {
-                label: 'Temperatura',
+                label: 'Onis',
                 data: [],
                 fill: false,
                 borderColor: 'rgb(199, 52, 52)',
@@ -261,7 +288,7 @@
 
         // Criando estrutura para plotar gráfico - config
         const config = {
-            type: 'line',
+            type: 'bar',
             data: dados,
         };
 

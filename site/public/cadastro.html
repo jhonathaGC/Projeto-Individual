@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de cadastro</title>
     <link rel="stylesheet" href="./CSS/cadastro.css">
-    
+
     <script src="./js/funcoes.js"></script>
 </head>
 
@@ -28,7 +28,7 @@
         </nav>
     </header>
 
-   
+
     <div class="container">
 
         <div class="form-img">
@@ -49,15 +49,16 @@
                         <input type="text" name="firstname" id="nome_input" placeholder="Digite o seu primeiro nome"
                             required>
                     </div>
-                    
+
                     <div class="input-box">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" id="email_input" placeholder="Digite o seu E-mail" required>
                     </div>
-                    
+
                     <div class="input-box">
                         <label for="password"> Senha</label>
-                        <input type="password" name="senha_input" id="senha_input" placeholder="Digite a sua senha" required>
+                        <input type="password" name="senha_input" id="senha_input" placeholder="Digite a sua senha"
+                            required>
                     </div>
                     <div class="input-box">
                         <label for="confirmpassword">Confirmar Senha</label>
@@ -65,10 +66,10 @@
                             placeholder="Confirme a sua senha" required>
                     </div>
                 </div>
-                <div class="continue-button">
-                    <button onclick="cadastrar()">Continuar</button>
-                </div>
             </form>
+            <div class="continue-button">
+                <button onclick="cadastrar()">Continuar</button>
+            </div>
         </div>
         <div id="div_erros_login"></div>
     </div>
@@ -87,7 +88,7 @@
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             return false;
         }
-       
+
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -106,14 +107,14 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                    window.location = "login.html";
-        
+                window.location = "login.html";
+
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-     
+
         });
 
         return false;

@@ -1,10 +1,16 @@
 /* pagina mural */
-
-*,
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Exo 2", sans-serif;
+  background-image: url('../assets/fundo-dash.png.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
-
 .label-captura {
   display: flex;
   justify-content: center;
@@ -111,17 +117,17 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-image: url('../assets/fundo-dash.png.jpg');
 }
 
 .dash {
-  width: 80%;
-  position: relative;
+  width: 94.4%;
   top: 0;
   left: 20%;
-  background-color: #161618;
   height: 100vh;
-  overflow: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin-left: 5.4%;
 }
 
 .regua {
@@ -129,28 +135,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
-.perigo-frio {
-  background-color: #5c6bc0;
-}
 
-.perigo-quente {
-  background-color: #ff7043;
-}
-
-.alerta-frio {
-  background-color: #42a5f5;
-}
-
-.alerta-quente {
-  background-color: #ffee58;
-}
-
-.ideal {
-  background-color: #9ccc65;
-}
 
 .item-regua {
   padding: 5px;
@@ -168,6 +156,8 @@ body {
   width: 100%;
   align-items: center;
   color: white;
+  margin-top: 2%;
+
 }
 
 .card {
@@ -176,9 +166,9 @@ body {
   flex-wrap: wrap;
   display: flex;
   text-align: center;
-  height: 180px;
+  height: 350px;
   justify-content: right;
-  background-color: #212124;
+  background-color: #2121246d;
   font-size: 20px;
 }
 
@@ -187,10 +177,14 @@ body {
   font-size: 50px;
   font-weight: lighter;
   text-align: left;
+  color: white;
+  font: bold;
 }
 
 .cards h1 {
   font-size: 22px;
+  color: white;
+  font: bold;
   width: 100%;
   border-bottom: solid white 1px;
   text-align: left;
@@ -217,7 +211,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 55px;
 }
 
 .graph {
@@ -227,7 +221,8 @@ body {
 }
 
 .tituloGraficos {
-  color: rgb(216, 216, 216);
+  color: white;
+  font: bold;
   display: flex;
   justify-content: center;
 }
@@ -274,4 +269,164 @@ body {
 canvas {
   width: 100% !important;
   height: 100% !important;
+}
+
+
+
+
+
+
+
+
+a {
+  color: white;
+  font: bold;
+  transform: 0.3s;
+  font-size: 17px;
+  font-family: 'Times New Roman';
+  text-decoration: none;
+
+  
+
+}
+
+
+a:hover {
+
+  opacity: 0.5;
+  color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+  width: 10%;
+  height: 10vh;
+}
+
+.divLogo img {
+  margin-left: 50px;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+
+  background: rgba(238, 130, 238, 0.303);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 8vh;
+  border-style: outset;
+  border-width: 2px;
+  position: fixed;
+}
+
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin-left: 50%;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+/*FIM NAV*/
+
+.navegation{
+  position: fixed;
+  height: 100vh;
+  background: rgba(238, 130, 238, 0.486);
+  width: 70px;
+  box-shadow: 10px 0 0 rgba(238, 130, 238, 0.55);
+  border-left: 10px solid none;
+  overflow-x: hidden;
+  transition: 0.5s;
+  top: 8vh;
+}
+.navegation:hover{
+  width: 200px;
+}
+
+.navegation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+
+}
+.navegation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px ;
+  border-bottom-left-radius: 20px ;
+}
+
+.navegation ul li a{
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  border-bottom-left-radius: 20px ;
+}
+
+.navegation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+.navegation ul li a .icon ion-icon{
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.navegation ul li a .title{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.navegation ul li.active{
+  background: violet;
+}
+.navegation ul li.active a::before{
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 violet;
+}
+.navegation ul li.active a::after{
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: none ;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 violet;
+}
+ul img{
+  width: 30px;
+  height: 30px;
 }
