@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="teste.css" rel="stylesheet">
-  <script defer src="script.js"></script>
   <title>Quiz App</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="divLogo">
-                <a href="../index.html"><img src="../assets/logo.png" alt=""></a>
-            </div>
-            <ul class="nav-list">
-                <li class="nav-list"><a class="interação" href="../pages/historia.html">História</a></li>
-                <li class="nav-list"><a class="interação" href="../pages/hashiras.html">Hashiras</a></li>
-                <li class="nav-list"><a class="interação" href="../pages/onis.html">Onis</a></li>
-                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
-                <li class="nav-list"><a class="interação" href="../cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="divLogo">
+        <a href="../index.html"><img src="../assets/logo.png" alt=""></a>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list"><a class="interação" href="../pages/historia.html">História</a></li>
+        <li class="nav-list"><a class="interação" href="../pages/hashiras.html">Hashiras</a></li>
+        <li class="nav-list"><a class="interação" href="../pages/onis.html">Onis</a></li>
+        <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
+        <li class="nav-list"><a class="interação" href="../cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
   <div class="container">
+    
     <div id="question-container" class="hide">
       <div id="question">Question</div>
       <div id="answer-buttons" class="btn-grid">
-        <button class="btn">Answer 1</button>
-        <button class="btn">Answer 2</button>
-        <button class="btn">Answer 3</button>
-        <button class="btn">Answer 4</button>
+        <button class="btn">resposta 1</button>
+        <button class="btn">resposta 2</button>
+        <button class="btn">resposta 3</button>
+        <button class="btn">resposta 4</button>
       </div>
     </div>
     <div class="controls">
@@ -41,116 +45,119 @@
 </body>
 </html>
 <script>
-    const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions, currentQuestionIndex
+  const startButton = document.getElementById('start-btn')
+  const nextButton = document.getElementById('next-btn')
+  const questionContainerElement = document.getElementById('question-container')
+  const questionElement = document.getElementById('question')
+  const answerButtonsElement = document.getElementById('answer-buttons')
 
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
+  let shuffledQuestions, currentQuestionIndex
 
-function startGame() {
-  startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  questionContainerElement.classList.remove('hide')
-  setNextQuestion()
-}
+  startButton.addEventListener('click', startGame)
+  nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+  })
 
-function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
-}
+  function startGame() {
+    startButton.classList.add('hide')
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainerElement.classList.remove('hide')
+    setNextQuestion()
+  }
 
-function showQuestion(question) {
-  questionElement.innerText = question.question
-  question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
-    if (answer.correct) {
-      button.dataset.correct = answer.correct
+  function setNextQuestion() {
+    resetState()
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+  }
+
+  function showQuestion(question) {
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+      const button = document.createElement('button')
+      button.innerText = answer.text
+      button.classList.add('btn')
+      if (answer.correct) {
+        button.dataset.correct = answer.correct
+      }
+      button.addEventListener('click', selectAnswer)
+      answerButtonsElement.appendChild(button)
+    })
+  }
+
+  function resetState() {
+    clearStatusClass(document.body)
+    nextButton.classList.add('hide')
+    while (answerButtonsElement.firstChild) {
+      answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
-}
-
-function resetState() {
-  clearStatusClass(document.body)
-  nextButton.classList.add('hide')
-  while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
-}
 
-function selectAnswer(e) {
-  const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
-  setStatusClass(document.body, correct)
-  Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
-  })
-  if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide')
-  } else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+  function selectAnswer(e) {
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+      setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+      nextButton.classList.remove('hide')
+    } else {
+      startButton.innerText = 'Restart'
+      startButton.classList.remove('hide')
+    }
   }
-}
 
-function setStatusClass(element, correct) {
-  clearStatusClass(element)
-  if (correct) {
-    element.classList.add('correct')
-  } else {
-    element.classList.add('wrong')
+  function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+      element.classList.add('correct')
+    } else {
+      element.classList.add('wrong')
+    }
   }
-}
 
-function clearStatusClass(element) {
-  element.classList.remove('correct')
-  element.classList.remove('wrong')
-}
-
-const questions = [
-  {
-    question: 'What is 2 + 2?',
-    answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
-    ]
-  },
-  {
-    question: 'Who is the best YouTuber?',
-    answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
-    ]
-  },
-  {
-    question: 'Is web development fun?',
-    answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
-    ]
-  },
-  {
-    question: 'What is 4 * 2?',
-    answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
-    ]
+  function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
   }
-]
+
+  const questions = [
+    {
+      question: 'What is 2 + 2?',
+      answers: [
+        { text: '4', correct: true },
+        { text: '22', correct: false }
+      ]
+    },
+    {
+      question: 'Qualé o nome da irmã de Tanjiro',
+      answers: [
+        { text: 'Nezuko kamado', correct: true },
+        { text: 'Shinobu Kocho', correct: false },
+        { text: 'Mitsuri Kanroji', correct: false },
+        { text: 'Fun Fun Function', correct: false }
+      ]
+    },
+    {
+      question: 'Qual o nome do Kekijutsu utilizado por Nezuko',
+      answers: [
+        { text: 'Hiasobi Temari', correct: false },
+        { text: 'Flecha Koketsu', correct: false },
+        { text: 'Sangue Explosivo', correct: true },
+        { text: 'teias', correct: false }
+      ]
+    },
+    {
+      question: 'Qual o nome da Lua superior 5',
+      answers: [
+        { text: 'Akaza', correct: false },
+        { text: 'Hantengu', correct: false },
+        { text: 'Daki', correct: false },
+        { text: 'Gyokko', correct: true }
+      ]
+    }
+  ]
 </script>
