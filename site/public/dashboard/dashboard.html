@@ -9,8 +9,9 @@
     <title>AquaTech | Dashboards</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="dashboards.css">   
+    <link rel="stylesheet" href="dashboards.css">
     <script src="../js/funcoes.js"></script>
+    <script src="./alerta.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -24,70 +25,46 @@
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload=" atualizarFeed()">
-    <header>
-        <nav>
-            <div class="divLogo">
-                <a href="../index.html"><img src="../assets/logo.png" alt=""></a>
-            </div>
-            <ul class="nav-list">
-                <li class="nav-list"><a class="interação" href="../pages/hashiras.html">História</a></li>
-                <li class="nav-list"><a class="interação" href="../pages/hashiras.html">Hashiras</a></li>
-                <li class="nav-list"><a class="interação" href="../pages/onis.html">Onis</a></li>
-                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
-                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
-           
-            </ul>
-        </nav>
-    </header>
-    <div class="geral">
-        <div class="navegation">
-            <ul>
-                <li class="list ">
-                    <a href="Kyojuro-Rengoku.html">
-                        <span class="icon"><img src="../assets/fire-icon.png" alt=""></span>
-                        <span class="title">AquaTech</span>
-                    </a>
-                </li>
-                <li id="sound"  class="list">
-                    <a href="#">
-                        <span class="icon"><img src="../assets/sound-waves-icon.png" alt=""></span>
-                        <span class="title">usuário </span>
-                    </a>
-                </li>
-                <li id="love"  class="list">
-                    <a href="./cards.html">
-                        <span class="icon"><img src="../assets/love-icon.png" alt=""></span>
-                        <span class="title">Aquários</span>
-                    </a>
-                </li>
-                <li id="insect"  class="list active">
-                    <a href="#">
-                        <span class="icon"><img src="../assets/insect-icon.png" alt=""></span>
-                        <span class="title">Gráficos</span>
-                    </a>
-                </li>
-                <li o class="list">
-                    <a href="./mural.html">
-                        <span class="icon"><img src="../assets/mis-icon.png" alt=""></span>
-                        <span class="title">Mural de Avisos</span>
-                    </a>
-                </li>
-                <li onclick="limparSessao()" class="list">
-                    <a href="./mural.html">
-                        <span class="icon"><img src="../assets/mis-icon.png" alt=""></span>
-                        <span class="title">Sair</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    </div>
-    <div class="janela">
+<!-- <body onload=" atualizarFeed()"> -->
 
-        
+<body>
+
+    <div class="janela">
+        <div class="header-left">
+            <h1>AquaTech</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./cards.html">
+                    <h3>Aquários</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav">
+
+                <h3>Gráficos</h3>
+
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./mural.html">
+                    <h3>Mural de Avisos</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
         <div class="dash">
+            <div id="alerta">
+            </div>
+
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
                 <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Aquario 1</button>
@@ -146,6 +123,8 @@
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
@@ -166,12 +145,12 @@
 
     verificar_autenticacao();
 
-    function alterarTitulo(idAquario) {
-        var tituloAquario = document.getElementById(`tituloAquario${idAquario}`)
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+    function alterarTitulo(idRespostas) {
+        var tituloAquario = document.getElementById(`tituloAquario${idRespostas}`)
+        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idRespostas + "</span>"
     }
 
-    function exibirAquario(idAquario) {
+    function exibirAquario(idRespostas) {
         let todosOsGraficos = document.getElementById("graficos")
 
         for (i = 1; i <= todosOsGraficos.childElementCount; i++) {
@@ -191,12 +170,12 @@
         }
 
         // exibindo - ou não - o gráfico
-        let graficoExibir = document.getElementById(`grafico${idAquario}`)
+        let graficoExibir = document.getElementById(`grafico${idRespostas}`)
         graficoExibir.classList.remove("display-none")
         graficoExibir.classList.add("display-block")
 
         // alterando estilo do botão
-        let btnExibir = document.getElementById(`btnAquario${idAquario}`)
+        let btnExibir = document.getElementById(`btnAquario${idRespostas}`)
         btnExibir.classList.remove("btn-white")
         btnExibir.classList.add("btn-pink")
     }
@@ -212,21 +191,22 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function obterDadosGrafico(idAquario) {
+    function obterDadosGrafico(idRespostas) {
 
-        alterarTitulo(idAquario)
+        alterarTitulo(idRespostas)
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/${idRespostas}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
                     plotarGrafico(resposta, idAquario);
+                    
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -240,7 +220,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, idRespostas) {
 
         console.log('iniciando plotagem do gráfico...');
 
@@ -251,14 +231,14 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Hashiras',
+                label: 'Umidade',
                 data: [],
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1
             },
             {
-                label: 'Onis',
+                label: 'Temperatura',
                 data: [],
                 fill: false,
                 borderColor: 'rgb(199, 52, 52)',
@@ -288,13 +268,13 @@
 
         // Criando estrutura para plotar gráfico - config
         const config = {
-            type: 'bar',
+            type: 'line',
             data: dados,
         };
 
         // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
-            document.getElementById(`myChartCanvas${idAquario}`),
+            document.getElementById(`myChartCanvas${idRespostas}`),
             config
         );
 
@@ -315,6 +295,8 @@
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
+                    obterdados(idAquario);
+                    // alertar(novoRegistro, idAquario);
                     console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
                     console.log(`Dados atuais do gráfico:`);
                     console.log(dados);

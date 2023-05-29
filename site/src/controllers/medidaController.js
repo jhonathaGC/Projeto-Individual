@@ -2,7 +2,7 @@ var medidaModel = require("../models/medidaModel");
 
 function buscarUltimasMedidas(req, res) {
 
-    const limite_linhas = 7;
+    const limite_linhas = 1;
 
     var idAquario = req.params.idAquario;
 
@@ -24,7 +24,7 @@ function buscarUltimasMedidas(req, res) {
 
 function buscarMedidasEmTempoReal(req, res) {
 
-    var idAquario = req.params.idAquario;
+    var idUsuario = req.body.idUsuario;
 
     console.log(`Recuperando medidas em tempo real`);
 

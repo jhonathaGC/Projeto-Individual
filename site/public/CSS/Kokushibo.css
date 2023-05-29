@@ -54,7 +54,7 @@ nav {
     border-style: outset;
     border-width: 2px;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.595);
+    background-color: rgba(0, 0, 0, 0.146);
  
 }
 
@@ -201,7 +201,7 @@ h1{
 }
 h2{
     color: white;
-    margin-left: 35px;
+    margin-left: 4%;
 }
 
 .historia{
