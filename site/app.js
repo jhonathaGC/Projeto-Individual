@@ -4,6 +4,7 @@ process.env.AMBIENTE_PROCESSO = "desenvolvimento";
 var express = require("express");
 var cors = require("cors");
 var path = require("path");
+var {connection} = require('./src/database/config.js')
 var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3333 : 8080;
 
 var app = express();
@@ -23,6 +24,25 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/avisos", avisosRouter);
 app.use("/medidas", medidasRouter)
+
+
+    app.get('/resultados', (req,res) => {
+        connection.connect()
+       var selectResultados=`
+       select * from respostas 
+       ` 
+
+       connection.query(selectResultados,(error, results, fields) => {
+        if(error){
+            console.log(error)
+
+            res.status(500).json({error: "Não consegui pegar os resultados"})
+            return
+        } 
+        res.json(results)
+       })
+    })
+
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

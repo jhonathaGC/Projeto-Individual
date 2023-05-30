@@ -24,6 +24,12 @@ var mySqlConfig = {
     user: "Jhonny",
     password: "jhonny1120",
 };
+var connection = mysql.createConnection({
+    host: "localhost",
+    database: "aquatech",
+    user: "Jhonny",
+    password: "jhonny1120",
+});
 
 function executar(instrucao) {
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
@@ -67,5 +73,6 @@ function executar(instrucao) {
 }
 
 module.exports = {
-    executar
+    executar,
+     connection
 }

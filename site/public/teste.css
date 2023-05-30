@@ -8,7 +8,7 @@
 body{
    
     min-height: 100vh;
-    background-image: url('../assets/fundo-serpente.png');
+    background-image: url('./assets/fundo-serpente.png');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
@@ -66,6 +66,96 @@ nav {
     letter-spacing: 3px;
     margin-left: 32px;
 }
+
+
+.navegation{
+  position: fixed;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.773);
+  width: 70px;
+  box-shadow: 10px 0 0 rgba(0, 0, 0, 0.506);
+  border-left: 10px solid none;
+  overflow-x: hidden;
+  transition: 0.5s;
+  top: 8vh;
+}
+.navegation:hover{
+  width: 200px;
+}
+
+.navegation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+
+}
+.navegation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px ;
+  border-bottom-left-radius: 20px ;
+}
+
+.navegation ul li a{
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  border-bottom-left-radius: 20px ;
+}
+
+.navegation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+.navegation ul li a .icon ion-icon{
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.navegation ul li a .title{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.navegation ul li.active{
+  background: rgba(0, 0, 0, 0.506);
+}
+.navegation ul li.active a::before{
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, 0);
+}
+.navegation ul li.active a::after{
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: none ;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 rgba(128, 128, 128, 0);
+}
   
   :root {
     --hue-neutral: 200;
@@ -77,6 +167,7 @@ nav {
   
   .container {
     margin-top: 5%;
+    margin-left: 23%;
     width: 800px;
     max-width: 80%;
     background-color: blue;
@@ -130,3 +221,11 @@ nav {
   .hide {
     display: none;
   }
+
+
+
+  
+ul img{
+  width: 30px;
+  height: 30px;
+}

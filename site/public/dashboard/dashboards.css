@@ -1,286 +1,22 @@
-/* pagina mural */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: "Exo 2", sans-serif;
-  background-image: url('../assets/fundo-dash.png.jpg');
+
+body{
+ 
+  min-height: 100vh;
+  background: url('../assets/fundo-pedra.png');
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-y: hidden;
+  
 }
-.label-captura {
-  display: flex;
-  justify-content: center;
-}
-
-.dash-right .avisos {
-  width: 100%;
-  /* border: 3px solid pink; */
-  color: rgb(216, 216, 216);
-  font-family: "Exo 2", sans-serif;
-}
-
-.dash-right .avisos .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.dash-right .avisos .container .div-form {
-  width: 100%;
-}
-
-.dash-right .avisos .container .div-form #form_postagem {
-  width: 100%;
-}
-
-.dash-right .avisos .div-form label {
-  width: 100%;
-}
-
-.dash-right .avisos .div-form input {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.dash-right .avisos .div-form textarea {
-  width: 100%;
-  /* color: #E6005A; */
-  border: 3px solid #e6005a;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.dash-right .avisos .div-form button {
-  cursor: pointer;
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
-  width: 120px;
-}
-
-.publicacao-btn-editar {
-  cursor: pointer;
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 5px 8px;
-  color: white;
-  background-color: #e6005a;
-  width: 80px;
-}
-
-.publicacao {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  border-bottom: 3px solid #e6005a;
-  padding: 20px;
-}
-
-.publicacao > *:not(:last-child) {
-  padding: 0 0 10px 0;
-}
-
-.div-results {
-  width: 100%;
-}
-
-.div-results .feed-container {
-  background-color: #212124;
-  border-radius: 5px;
-  margin-bottom: 80px;
-}
-
-.div-buttons {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.div-buttons > * {
-  margin-left: 30px;
-}
-
-/* pagina graficos */
-
-.dash-header {
-  background-image: url('../assets/fundo-dash.png.jpg');
-}
-
-.dash {
-  width: 94.4%;
-  top: 0;
-  left: 20%;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  margin-left: 5.4%;
-}
-
-.regua {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin-top: 80px;
-}
-
-
-
-.item-regua {
-  padding: 5px;
-  width: 15%;
-  margin: 5px;
-  text-align: center;
-  padding-top: 15px;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 450px;
-  width: 100%;
-  align-items: center;
-  color: white;
-  margin-top: 2%;
-
-}
-
-.card {
-  margin: 2%;
-  width: 40%;
-  flex-wrap: wrap;
-  display: flex;
-  text-align: center;
-  height: 350px;
-  justify-content: right;
-  background-color: #2121246d;
-  font-size: 20px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 50px;
-  font-weight: lighter;
-  text-align: left;
-  color: white;
-  font: bold;
-}
-
-.cards h1 {
-  font-size: 22px;
-  color: white;
-  font: bold;
-  width: 100%;
-  border-bottom: solid white 1px;
-  text-align: left;
-  font-weight: lighter;
-  margin: 20px;
-}
-
-.temperatura,
-.umidade {
-  margin: 5px;
-  margin-left: 20px;
-  width: 75%;
-}
-
-.cor-alerta {
-  width: 13%;
-  height: 30%;
-  border-radius: 50px;
-  margin-top: 6%;
-  /* background-color: #c7c7c7; */
-}
-
-.btns-dash {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 55px;
-}
-
-.graph {
-  width: 80%;
-  margin: auto;
-  padding-top: 10px;
-}
-
-.tituloGraficos {
-  color: white;
-  font: bold;
-  display: flex;
-  justify-content: center;
-}
-
-.btn-chart {
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: #e6005a;
-  background-color: white;
-  margin: 5px;
-  border-radius: 3px;
-}
-
-.btn-pink {
-  color: white;
-  background-color: #e6005a;
-}
-
-.btn-white {
-  color: #e6005a;
-  background-color: white;
-
-}
-
-.label-captura {
-  height: 80px;
-}
-
-.display-none {
-  display: none;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.display-block {
-  display: block;
-}
-
-canvas {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-
-
-
-
-
-
+ 
 
 a {
-  color: white;
-  font: bold;
+  color: black;
   transform: 0.3s;
   font-size: 17px;
   font-family: 'Times New Roman';
@@ -312,16 +48,16 @@ a:hover {
 /* FIM LOGO NAV*/
 
 nav {
-
-  background: rgba(238, 130, 238, 0.303);
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: transparent;
   height: 8vh;
   border-style: outset;
   border-width: 2px;
   position: fixed;
+  
 }
 
 
@@ -341,9 +77,9 @@ nav {
 .navegation{
   position: fixed;
   height: 100vh;
-  background: rgba(238, 130, 238, 0.486);
+  background: rgba(128, 128, 128, 0.773);
   width: 70px;
-  box-shadow: 10px 0 0 rgba(238, 130, 238, 0.55);
+  box-shadow: 10px 0 0 rgba(0, 0, 0, 0.506);
   border-left: 10px solid none;
   overflow-x: hidden;
   transition: 0.5s;
@@ -402,7 +138,7 @@ nav {
   white-space: nowrap;
 }
 .navegation ul li.active{
-  background: violet;
+  background: rgba(0, 0, 0, 0.506);
 }
 .navegation ul li.active a::before{
   content: '';
@@ -413,7 +149,7 @@ nav {
   height: 30px;
   background: none;
   border-radius: 50%;
-  box-shadow: 15px 15px 0 violet;
+  box-shadow: 15px 15px 0 rgba(0, 0, 0, 0);
 }
 .navegation ul li.active a::after{
   content: '';
@@ -424,9 +160,33 @@ nav {
   height: 30px;
   background: none ;
   border-radius: 50%;
-  box-shadow: 15px -15px 0 violet;
+  box-shadow: 15px -15px 0 rgba(128, 128, 128, 0);
 }
+
+.label-captura {
+  height: 80px;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-block {
+  display: block;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
 ul img{
   width: 30px;
   height: 30px;
 }
+
