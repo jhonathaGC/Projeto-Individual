@@ -38,20 +38,14 @@
                 <li class="nav-list"><a class="interação" href="../pages/historia.html">História</a></li>
                 <li class="nav-list"><a class="interação" href="../pages/hashiras.html">Hashiras</a></li>
                 <li class="nav-list"><a class="interação" href="../pages/onis.html">Onis</a></li>
-                <li class="nav-list"><a class="interação" href="../login.html">Login</a></li>
-                <li class="nav-list"><a class="interação" href="../cadastro.html">Cadastro</a></li>
+
             </ul>
         </nav>
     </header>
     <div class="geral">
         <div class="navegation">
             <ul>
-                <li onclick="fire()" class="list ">
-                    <a href="../quiz.htmlgit ">
-                        <span class="icon"><img src="../assets/fire-icon.png" alt=""></span>
-                        <span class="title">Quiz</span>
-                    </a>
-                </li>
+                
                 <li id="sound" onclick="sound()" class="list">
                     <a href="./dashboard.html">
                         <span class="icon"><img src="../assets/sound-waves-icon.png" alt=""></span>
@@ -78,7 +72,31 @@
 
 
 
-        <canvas id="graficos"></canvas>
+    </div>
+    <br>
+
+    <div class="ambos">
+
+        <div class="container">
+
+            <div id="question-container" class="hide">
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">resposta 1</button>
+                    <button class="btn">resposta 2</button>
+                    <button class="btn">resposta 3</button>
+                    <button class="btn">resposta 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+            </div>
+        </div>
+
+
+        <canvas class="graficos" id="graficos"></canvas>
+    </div>
 
 </body>
 
@@ -106,11 +124,11 @@
                 var grafico = new Chart(pizza, {
                     type: "doughnut",
                     data: {
-                        labels: ["Acertos", "Erros"],
+                        labels: [],
                         datasets: [
                             {
-                                data: [acertos, erros],
-                                borderWidth: "0",
+                                data: [erros, acertos],
+                                borderWidth: "3",
                                 backgroundColor: [
                                     'rgb(255, 99, 132)',
                                     'rgb(54, 162, 235)',
@@ -133,4 +151,204 @@
                 });
             })
     }
+
+
+
+
+    const startButton = document.getElementById('start-btn')
+    const nextButton = document.getElementById('next-btn')
+    const questionContainerElement = document.getElementById('question-container')
+    const questionElement = document.getElementById('question')
+    const answerButtonsElement = document.getElementById('answer-buttons')
+
+    let shuffledQuestions, currentQuestionIndex
+
+    startButton.addEventListener('click', startGame)
+    nextButton.addEventListener('click', () => {
+        currentQuestionIndex++
+        setNextQuestion()
+    })
+
+    function startGame() {
+        startButton.classList.add('hide')
+        shuffledQuestions = questions.sort(() => Math.random() - .5)
+        currentQuestionIndex = 0
+        questionContainerElement.classList.remove('hide')
+        setNextQuestion()
+    }
+
+    function setNextQuestion() {
+        resetState()
+        showQuestion(shuffledQuestions[currentQuestionIndex])
+        
+    }
+
+    function showQuestion(question) {
+        questionElement.innerText = question.question
+        question.answers.forEach(answer => {
+            const button = document.createElement('button')
+            button.innerText = answer.text
+            button.classList.add('btn')
+            if (answer.correct) {
+                button.dataset.correct = answer.correct
+                button.addEventListener('click', () => respostaCorreta++);
+            } else {
+                button.addEventListener('click', () => respostaErrada++);
+            }
+            button.addEventListener('click', selectAnswer)
+            answerButtonsElement.appendChild(button)
+        })
+    }
+
+    function resetState() {
+        clearStatusClass(document.body)
+        nextButton.classList.add('hide')
+        while (answerButtonsElement.firstChild) {
+            answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+        }
+        fetch("/usuarios/cadastrarResposta", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idUsuario: sessionStorage.ID_USUARIO,
+                respostaCorreta: respostaCorreta,
+                respostaErrada: respostaErrada
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+
+        });
+
+        return false;
+    }
+
+    function selectAnswer(e) {
+        const selectedButton = e.target
+        const correct = selectedButton.dataset.correct
+        setStatusClass(document.body, correct)
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatusClass(button, button.dataset.correct)
+        })
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide')
+        } else {
+            startButton.innerText = 'Restart'
+            startButton.classList.remove('hide')
+        }
+
+    }
+
+    var respostaCorreta = 0
+    var respostaErrada = 0
+
+    function setStatusClass(element, correct) {
+        clearStatusClass(element)
+        if (correct) {
+            element.classList.add('correct')
+        } else {
+            element.classList.add('wrong')
+        }
+
+    }
+
+    function clearStatusClass(element) {
+        element.classList.remove('correct')
+        element.classList.remove('wrong')
+
+
+    }
+
+    const questions = [
+
+        {
+            question: 'Qualé o nome da irmã de Tanjiro?',
+            answers: [
+                { text: 'Nezuko kamado', correct: true },
+                { text: 'Shinobu Kocho', correct: false },
+                { text: 'Mitsuri Kanroji', correct: false },
+                { text: 'Fun Fun Function', correct: false }
+            ]
+        },
+        {
+            question: 'Qual o nome do Kekijutsu utilizado por Nezuko?',
+            answers: [
+                { text: 'Hiasobi Temari', correct: false },
+                { text: 'Flecha Koketsu', correct: false },
+                { text: 'Sangue Explosivo', correct: true },
+                { text: 'teias', correct: false }
+            ]
+        },
+        {
+            question: 'Qual o nome da Lua superior 5?',
+            answers: [
+                { text: 'Akaza', correct: false },
+                { text: 'Hantengu', correct: false },
+                { text: 'Daki', correct: false },
+                { text: 'Gyokko', correct: true }
+            ]
+        },
+        {
+            question: 'Quantos estilos de respiração existem em DemonSlayer?',
+            answers: [
+                { text: '11', correct: true },
+                { text: '5', correct: false },
+                { text: '10', correct: false },
+                { text: '9', correct: false }
+            ]
+        },
+        {
+            question: 'Quem foi o responsavel pela morte de Kyojuro Rngoku?',
+            answers: [
+                { text: 'Doma', correct: false },
+                { text: 'Muzan', correct: false },
+                { text: 'Akaza', correct: true },
+                { text: 'Hantengu', correct: false }
+            ]
+        },
+        
+        {
+            question: 'Quantas esposas possui o Hashira do Som?',
+            answers: [
+                { text: '2', correct: false },
+                { text: '0', correct: false },
+                { text: '1', correct: false },
+                { text: '3', correct: true }
+            ]
+        },
+        {
+            question: 'Qual o nome da flor que Muzan Kibutsuji tanto procura?',
+            answers: [
+                { text: 'Hibisco', correct: false },
+                { text: 'Bromélia', correct: false },
+                { text: 'Lirio Aranha Azul', correct: true },
+                { text: 'Celósia', correct: false }
+            ]
+        },
+        {
+            question: 'Qual a cor de lamina mais misteriosa em DemonSlayer?',
+            answers: [
+                { text: 'Branca', correct: false },
+                { text: 'Preta', correct: true },
+                { text: 'Vermelha', correct: false },
+                { text: 'Azul', correct: false }
+            ]
+        },
+
+
+    ]
+
 </script>
