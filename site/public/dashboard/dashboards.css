@@ -35,16 +35,16 @@ a:hover {
 
 /*LOGO NAV*/
 .divLogo {
-  width: 10%;
-  height: 10vh;
+  display: flex;
+  justify-content: center;
+  width: 130px;
+  height: 50px;
 }
 
 .divLogo img {
-  margin-left: 50px;
-  flex-direction: row;
-  width: 100%;
+ width: 100%;
+ height: 100%;
 }
-
 /* FIM LOGO NAV*/
 
 nav {
@@ -57,7 +57,7 @@ nav {
   border-style: outset;
   border-width: 2px;
   position: fixed;
-  
+  width: 100%;
 }
 
 

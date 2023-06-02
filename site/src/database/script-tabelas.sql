@@ -8,7 +8,7 @@ comandos para mysql - banco local - ambiente de desenvolvimento
 
 CREATE DATABASE DemonSlayer;
 
-USE aquatech;
+USE DemonSlayer;
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,

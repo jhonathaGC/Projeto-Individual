@@ -32,7 +32,7 @@
     <header>
         <nav>
             <div class="divLogo">
-                <a href="../index.html"><img src="../assets/logo.png" alt=""></a>
+                <a href="../home.html"><img src="../assets/logo.png" alt=""></a>
             </div>
             <ul class="nav-list">
                 <li class="nav-list"><a class="interação" href="../pages/historia.html">História</a></li>
@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li id="love" onclick="love()" class="list">
-                    <a href="../index.html">
+                    <a href="../home.html">
                         <span class="icon"><img src="../assets/love-icon.png" alt=""></span>
                         <span class="title">Home</span>
                     </a>
@@ -124,7 +124,7 @@
                 var grafico = new Chart(pizza, {
                     type: "doughnut",
                     data: {
-                        labels: [],
+                        labels: [red, blue],
                         datasets: [
                             {
                                 data: [erros, acertos],

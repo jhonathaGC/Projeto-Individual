@@ -24,14 +24,15 @@ a:hover {
 
 /*LOGO NAV*/
 .divLogo {
-    width: 10%;
-    height: 10vh;
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
 }
 
 .divLogo img {
-    margin-left: 50px;
-    flex-direction: row;
-    width: 100%;
+   width: 100%;
+   height: 100%;
 }
 
 /* FIM LOGO NAV*/
@@ -64,26 +65,28 @@ nav {
     display: flex;
 }
 .lateralEsquerda {
-    width: 11%;
+    margin-left: .5%;
+    width: 150px;
+    height: 188px;
 }
 .lateralEsquerda img{
     width: 100%;
-    height: 35vh;
+    height: 100%;
 }
 
 .meio{
-    width: 78%; 
-    margin: 0;
-    padding: 0;  
+    width: 80%; 
+
 }
 .lateralDireita {
-    margin: 0;
-    width: 11%;
+
+    width: 150px;
+    height: 188px;
 }
 .lateralDireita img{
     width: 100%;
-    height: 45vh;
-    margin: 0;
+    height: 100%;
+
 }
 
 .geral{
@@ -111,6 +114,7 @@ nav {
 }
 .form-img{
     height: 34vh; 
+    margin: 5px;
 }
 
 .container1 img{
@@ -130,6 +134,7 @@ nav {
     width: 500px;
     height: 250px;
     display: flex;
+    padding: 2px;
     
 }
 .container2 a{
