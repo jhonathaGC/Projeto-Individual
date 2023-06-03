@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    min-height: 100vh;
+    background-image: url('../assets/daki-fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: white;
+    
+}
+   
+
+a {
+    color: white;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+
+
+a:hover {
+
+    opacity: 0.5;
+    color: gray;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+}
+
+.divLogo img {
+   width: 100%;
+   height: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 8vh;
+    width: 100%;
+    border-style: outset;
+    border-width: 2px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.146);
+ 
+}
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: 50%;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/*FIM NAV*/
+
+.navegation{
+    position: fixed;
+    height: 100vh;
+    background: rgba(128, 128, 128, 0.594);
+    width: 70px;
+    box-shadow: 10px 0 0 gray;
+    border-left: 10px solid none;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 8vh;
+}
+.navegation:hover{
+    width: 200px;
+}
+
+.navegation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+
+}
+.navegation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+}
+
+.navegation ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    border-bottom-left-radius: 20px ;
+}
+
+.navegation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+.navegation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.navegation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.navegation ul li.active{
+    background: gray;
+}
+.navegation ul li.active a::before{
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 gray;
+}
+.navegation ul li.active a::after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: none ;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 gray;
+}
+
+
+.geral{
+    display: flex;
+}
+
+ .geral {
+    width: 100%;
+  
+}
+
+.sobre{
+    width: 100%;
+    height: 100vh;
+    margin-left: 5% ;
+    padding: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+#imagem0{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+#imagem0 img{
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 15px;
+    justify-content: unset;
+}
+
+h1{
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px ;
+    height: 5vh;
+}
+
+h2{
+    color: white;
+    margin-left: 4%;
+}
+
+.historia{
+    color: white;
+    width: auto;
+    margin:  20px;
+    display: flex;
+    border-style: outset;
+    background: rgba(0, 0, 0, 0.321);
+    font-size: 16.1px;
+}
+.historia p{
+    margin: 10px;
+}
+.historia img{
+    width: 400px;
+    height: 241px;
+}
+
+#habilidades{
+    width: auto;
+    margin:  20px;
+    display: flex;
+    border-style: outset;
+    background: rgba(0, 0, 0, 0.321);
+    font-size: 16.1px;
+}
+
+#habilidades p{
+    margin: 10px;
+}
+
+#habilidades img{
+    width: 300px;
+    height: 250px;
+}
+#Gyuutarou{
+    width: auto;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    border-style: outset;
+    background: rgba(0, 0, 0, 0.321);
+    font-size: 16.1px;
+}
+#Gyuutarou p{
+    margin: 10px;
+}
+#Gyuutarou img{
+    width: 400px;
+    height: 272px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+#Gyuutarou2{
+    width: auto;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    border-style: outset;
+    background: rgba(0, 0, 0, 0.321);
+    font-size: 16.1px;
+}
+#Gyuutarou2 p{
+    margin: 10px;
+}
+#Gyuutarou2 img{
+    width: 400px;
+    height: 130px;
+    margin-right: 5px;
+}
+.exibicao_habilidades{
+    width: 100%;
+    border-style: outset;
+    display: flex
+}
+.exibicao_habilidades img{
+    width: 276px;
+
+}
+
+
+
+
+ul img{
+    width: 30px;
+    height: 30px;
+}
+

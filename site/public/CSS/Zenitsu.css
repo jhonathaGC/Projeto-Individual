@@ -1,0 +1,130 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:argen ;
+}
+
+body {
+
+    min-height: 100vh;
+    background-image: url('../assets/zenitsu-fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    height: 100vh;
+
+}
+
+
+
+a {
+    color: white;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+
+
+a:hover {
+
+    opacity: 0.5;
+    color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+}
+
+.divLogo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: transparent;
+    height: 8vh;
+    width: 100%;
+    border-style: outset;
+    border-width: 2px;
+    position: fixed;
+}
+
+.nav-list {
+    margin-left: 50%;
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.geral {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 20px;
+
+}
+
+.name {
+    margin-top: -11px;
+    text-align: center;
+    color: rgba(255, 255, 0, 0.559);
+}
+
+h2 {
+    color: white;
+    margin-left: 15px;
+}
+
+.title_historia {
+    margin-top: 2%;
+}
+
+.historia,
+.personalidade, .exibicao{
+    
+    width: 100%;
+    padding: 5px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.321);
+    border-style: outset;
+}
+
+.historia .p1,
+.personalidade .p1 {
+    display: flex;
+}
+
+.historia img,
+.personalidade .p1 {
+    height: 200px;
+}
+
+.personalidade img {
+    margin: 3px;
+}
+
+.exibicao img{
+    width: 282px;
+}

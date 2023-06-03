@@ -51,6 +51,7 @@ nav {
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 8vh;
+    width: 100%;
     border-style: outset;
     border-width: 2px;
     position: fixed;
