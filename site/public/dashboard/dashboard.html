@@ -48,7 +48,7 @@
                 
                 <li id="sound" onclick="sound()" class="list">
                     <a href="./dashboard.html">
-                        <span class="icon"><img src="../assets/sound-waves-icon.png" alt=""></span>
+                        <span class="icon"><img src="../assets/grafico-de-bolo.png" alt=""></span>
                         <span class="title">Grafico</span>
                     </a>
                 </li>
@@ -60,7 +60,7 @@
                 </li>
                 <li id="insect" onclick="insect()" class="list">
                     <a href="../home.html">
-                        <span class="icon"><img src="../assets/insect-icon.png" alt=""></span>
+                        <span class="icon"><img src="../assets/sair.png" alt=""></span>
                         <span class="title">Sair</span>
                     </a>
                 </li>
@@ -105,7 +105,7 @@
 <script>
 
     var id_usuario = Number(sessionStorage.ID_USUARIO)
-
+    setInterval(CarregarGrafico, 5000);
 
     function CarregarGrafico() {
 
@@ -124,7 +124,7 @@
                 var grafico = new Chart(pizza, {
                     type: "doughnut",
                     data: {
-                        labels: [red, blue],
+                        labels: ['ACERTOS', 'ERROS'],
                         datasets: [
                             {
                                 data: [erros, acertos],
@@ -143,6 +143,7 @@
                             position: "right",
                             labels: {
                                 fontColor: "black",
+                                fontSize: "18"
                             },
                         },
                         responsive: true,
@@ -150,6 +151,7 @@
                     },
                 });
             })
+          
     }
 
 
