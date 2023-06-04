@@ -54,7 +54,6 @@ nav {
     width: 100%;
     border-style: outset;
     border-width: 2px;
-    position: fixed;
     background-color: rgba(0, 0, 0, 0.146);
  
 }
@@ -194,7 +193,7 @@ nav {
 }
 
 h1{
-    margin-top: 15px;
+
     color: white;
     text-align: center;
     margin-bottom: 5px ;
@@ -224,6 +223,7 @@ h2{
     margin-top: 2%;
     margin-left: 1%;
     margin-right: 1%;
+    
 }
 
 .continuacao img{
@@ -243,6 +243,7 @@ h2{
     border-style: outset;
     background: rgba(255, 255, 255, 0.153);
     font-size: 16.1px;
+    margin-bottom: 4%;
 }
 #habilidades img{
     padding: 10px;

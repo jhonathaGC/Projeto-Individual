@@ -1,0 +1,147 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:argen ;
+}
+
+body {
+
+    min-height: 100vh;
+    background-image: url('../assets/nezuo-fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    height: 100vh;
+    color: white;
+
+}   
+
+
+
+a {
+    color: white;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+
+
+a:hover {
+
+    opacity: 0.5;
+    color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+}
+
+.divLogo img {
+    width: 100%;
+    height: 100%;
+}
+.principais{
+    margin-left: -7%;
+    width: 40%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:5%;
+}
+.principais li{
+    margin: 2% 0;
+}
+.principais a{
+
+    font-size:x-large;
+}
+
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 8vh;
+    width: 100%;
+    border-style: outset;
+    border-width: 2px;
+    background: rgba(255, 192, 203, 0.333);
+}
+
+.nav-list {
+
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.geral{
+    
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 3%;
+}
+h1{
+    text-align: center;
+}
+h2{
+    margin-left: 8%;
+}
+.conteudo, .habilidade_conteudo, .kekijutsu_conteudo{
+    border-style: outset;
+    width: 90%;
+    margin: 1% auto;
+    padding: .5%;
+    background: rgba(255, 192, 203, 0.206);
+}
+.conteudo p{
+    margin: 10px 0;
+
+}
+.conteudo .p1, .p2, .habilidade_conteudo p, .kekijutsu_conteudo .p1, .exibicao{
+    display: flex;
+}
+.conteudo .p1 img{
+    width: 300px;
+    height: 200px;
+}
+.conteudo .p2 img{
+    width: 700px;
+    height: 120px;
+    margin-bottom: -10px;
+}
+.habilidade_conteudo img{
+    width: 300px;
+    height: 170px;
+}
+.kekijutsu_conteudo img{
+    width: 200px;
+    height: 130px;
+}
+.exibicao{
+    border-style: outset;
+    width: 90%;
+    margin: 1% auto;
+    background: rgba(255, 192, 203, 0.206);
+}
+.exibicao img{
+    margin: .1%;
+    width: 263px;
+    height: 160px;
+}

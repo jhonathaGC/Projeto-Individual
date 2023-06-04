@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:argen ;
+}
+
+body {
+
+    min-height: 100vh;
+    background-image: url('../assets/inosuku-fundo.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    height: 100vh;
+    color: white;
+
+}
+
+
+
+a {
+    color: white;
+    transform: 0.3s;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+    text-decoration: none;
+}
+
+
+a:hover {
+
+    opacity: 0.5;
+    color: blue;
+}
+
+/*LOGO NAV*/
+.divLogo {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 50px;
+}
+
+.divLogo img {
+    width: 100%;
+    height: 100%;
+}
+.principais{
+    margin-left: -7%;
+    width: 40%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:5%;
+}
+.principais li{
+    margin: 2% 0;
+}
+.principais a{
+
+    font-size:x-large;
+}
+/* FIM LOGO NAV*/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 8vh;
+    width: 100%;
+    border-style: outset;
+    border-width: 2px;
+   background: rgba(0, 0, 0, 0.268);
+
+
+}
+
+.nav-list {
+
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.geral{
+
+    padding-bottom: 4%;
+    width: 100%;
+    height:100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+h1{
+    text-align: center;
+}
+h2{
+    width: 90%;
+    margin-left: 5% ;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.historia, .personalidade, .habilidade, .exibicao{
+    margin: 1% auto;
+    width: 90%;
+    display: flex;
+    border-style: outset;
+}
+.historia img{
+    height: 120px;
+}
+.historia p, .personalidade p, .habilidade p{
+    margin: 1%;
+}
+.personalidade img{
+    height: 137px;
+}
+.exibicao img{
+    width: 263px;    
+    margin: 0.1%;
+}
