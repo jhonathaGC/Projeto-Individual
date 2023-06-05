@@ -48,18 +48,18 @@
                 
                 <li id="sound" onclick="sound()" class="list">
                     <a href="./dashboard.html">
-                        <span class="icon"><img src="../assets/grafico-de-bolo.png" alt=""></span>
+                        <span class="icon"><img src="../assets/quiz.png" alt=""></span>
                         <span class="title">Grafico</span>
                     </a>
                 </li>
                 <li id="love" onclick="love()" class="list">
                     <a href="../home.html">
-                        <span class="icon"><img src="../assets/love-icon.png" alt=""></span>
+                        <span class="icon"><img src="../assets/home.png" alt=""></span>
                         <span class="title">Home</span>
                     </a>
                 </li>
                 <li id="insect" onclick="insect()" class="list">
-                    <a href="../home.html">
+                    <a href="../index.html">
                         <span class="icon"><img src="../assets/sair.png" alt=""></span>
                         <span class="title">Sair</span>
                     </a>
@@ -124,7 +124,7 @@
                 var grafico = new Chart(pizza, {
                     type: "doughnut",
                     data: {
-                        labels: ['ACERTOS', 'ERROS'],
+                        labels: ['ERROS', 'ACERTOS'],
                         datasets: [
                             {
                                 data: [erros, acertos],
